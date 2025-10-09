@@ -6,7 +6,7 @@ main
 *.ko
 *.obj
 *.elf
-
+.vscode
 # Linker output
 *.ilk
 *.map
