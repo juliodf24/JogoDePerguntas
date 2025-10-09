@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "tipos.c"
+#include "bibliotecas/cJSON.h"
 
 
 int main() {
