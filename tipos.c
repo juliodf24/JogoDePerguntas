@@ -1,7 +1,17 @@
 struct tipoPergunta {
     int nivel;
-    char enunciado[250];
-    char alternativas[4][250];
+    char *enunciado;
+    char **alternativas;
+    int qtdAlternativas;
     int respostaCorreta;
-    char dica[250];
+    char *dica;
 };
+
+struct tipoListaPerguntas{
+    int nivel;
+    struct tipoPergunta *pergunta;
+    int qtdPerguntas;
+};
+
+// struct tipoListaPerguntas bancoPerguntas[]
+// bancoPerguntas[nivel da pergunta].pergunta[numero da perguta].enunciado

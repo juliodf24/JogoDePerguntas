@@ -1,0 +1,73 @@
+{
+  "perguntas": [
+    {
+      "nivel": 1,
+      "perguntas": [
+        {
+          "enunciado": "Qual é o país conhecido como o berço do futebol? 💂🏻",
+          "alternativas": ["Brasil", "Inglaterra", "Alemanha", "Espanha"],
+          "resposta_correta": 1,
+          "dica": "O esporte surgiu no século XIX em uma ilha europeia."
+        },
+        {
+          "enunciado": "Quantos jogadores um time de futebol tem em campo 🏃🏼‍♂️?",
+          "alternativas": ["10", "11", "12", "9"],
+          "resposta_correta": 1,
+          "dica": "Inclui o goleiro nessa contagem."
+        },
+        {
+          "enunciado": "Quem é conhecido como 'Rei do Futebol 👑'?",
+          "alternativas": ["Pelé", "Maradona", "Cristiano Ronaldo", "Messi"],
+          "resposta_correta": 0,
+          "dica": "É brasileiro e tricampeão mundial."
+        }
+      ]
+    },
+    {
+      "nivel": 2,
+      "perguntas": [
+        {
+          "enunciado": "Qual é o maior estádio do Brasil? 🏟️",
+          "alternativas": ["Morumbi", "Mineirão", "Maracanã", "Beira-Rio"],
+          "resposta_correta": 2,
+          "dica": "Fica no Rio de Janeiro 🏖️."
+        },
+        {
+          "enunciado": "Em que país foi realizada a Copa do Mundo de 2018 🐻‍❄️?",
+          "alternativas": ["Brasil", "Alemanha", "Rússia", "Catar"],
+          "resposta_correta": 2,
+          "dica": "A final aconteceu em Moscou🪆."
+        },
+        {
+          "enunciado": "Qual time brasileiro é conhecido como 'Timão' 🦅?",
+          "alternativas": ["Flamengo", "Santos", "Corinthians", "Palmeiras"],
+          "resposta_correta": 2,
+          "dica": "Tem uma torcida chamada 'Gaviões da Fiel'."
+        }
+      ]
+    },
+    {
+      "nivel": 3,
+      "perguntas": [
+        {
+          "enunciado": "Qual clube revelou Neymar? ✋🏼😜🤚🏼",
+          "alternativas": ["Flamengo", "Santos", "Palmeiras", "Grêmio"],
+          "resposta_correta": 1,
+          "dica": "O mesmo clube onde Pelé 👑 começou."
+        },
+        {
+          "enunciado": "Em que ano o Brasil sediou a primeira Copa do Mundo?📆",
+          "alternativas": ["1950", "1970", "1994", "2014"],
+          "resposta_correta": 0,
+          "dica": "O Uruguai venceu a final no Maracanã🏟️."
+        },
+        {
+          "enunciado": "Quem foi o técnico do Brasil na Copa de 1994👨🏼‍🏫?",
+          "alternativas": ["Parreira", "Zagallo", "Felipão", "Tite"],
+          "resposta_correta": 0,
+          "dica": "Conquistou o tetracampeonato🏆."
+        }
+      ]
+    }
+  ]
+}
