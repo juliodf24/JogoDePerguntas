@@ -1,30 +1,27 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include "tipos.c"
-#include "bibliotecas/cJSON.h"
-
 
 int main() {
-    struct tipoPergunta *perguntaAtual;
-    struct tipoListaPerguntas *bancoPerguntas;
+    struct tipoPergunta perguntaAtual;
 
-    perguntaAtual[0].nivel = 1;
-    strcpy(perguntaAtual[0].enunciado, "Qual é o país conhecido como o berço do futebol? 💂🏻");
-    strcpy(perguntaAtual[0].alternativas[0], "Brasil");
-    strcpy(perguntaAtual[0].alternativas[1], "Inglaterra");
-    strcpy(perguntaAtual[0].alternativas[2], "Alemanha");
-    strcpy(perguntaAtual[0].alternativas[3], "Espanha");
-    perguntaAtual[0].respostaCorreta = 1;
-    strcpy(perguntaAtual[0].dica, "O esporte surgiu no século XIX em uma ilha europeia.");
+    perguntaAtual.nivel = 1;
+    strcpy(perguntaAtual.enunciado, "Qual é o país conhecido como o berço do futebol? 💂🏻");
+    strcpy(perguntaAtual.alternativas[0], "Brasil");
+    strcpy(perguntaAtual.alternativas[1], "Inglaterra");
+    strcpy(perguntaAtual.alternativas[2], "Alemanha");
+    strcpy(perguntaAtual.alternativas[3], "Espanha");
+    perguntaAtual.qtdAlternativas = 4;
+    perguntaAtual.respostaCorreta = 1;
+    strcpy(perguntaAtual.dica, "O esporte surgiu no século XIX em uma ilha europeia.");
 
-    printf("Nível %d\n", perguntaAtual[0].nivel);
-    printf("%s\n", perguntaAtual[0].enunciado);
-    for (int i = 0; i < 4; i++) {
-        printf("%d) %s\n", i + 1, perguntaAtual[0].alternativas[i]);
+    printf("Nível %d\n", perguntaAtual.nivel);
+    printf("%s\n", perguntaAtual.enunciado);
+    for (int i = 0; i < perguntaAtual.qtdAlternativas; i++) {
+        printf("%d) %s\n", i + 1, perguntaAtual.alternativas[i]);
     }
-    printf("Dica: %s\n", perguntaAtual[0].dica);
-    printf("Resposta correta: %s\n", perguntaAtual[0].alternativas[perguntaAtual[0].respostaCorreta]);
+    printf("Dica: %s\n", perguntaAtual.dica);
+    printf("Resposta correta: %s\n", perguntaAtual.alternativas[perguntaAtual.respostaCorreta]);
 
     return 0;
 }
