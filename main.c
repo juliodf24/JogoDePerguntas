@@ -5,7 +5,7 @@
 int main() {
     struct tipoBancoPerguntas bancoPerguntas = {0};
     struct tipoPergunta perguntaAtual;
-    CriarBancoQuestoes( &bancoPerguntas);
+    CriarBancoQuestoes(&bancoPerguntas);
 
     // exemplo de uso
     printf("Total de niveis: %d \n", bancoPerguntas.qtdNiveis);
