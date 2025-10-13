@@ -1,27 +1,27 @@
 #include <stdio.h>
 #include <string.h>
-#include "tipos.c"
+#include "lerBancoPerguntas.c"
 
 int main() {
+    struct tipoBancoPerguntas bancoPerguntas = {0};
     struct tipoPergunta perguntaAtual;
+    CriarBancoQuestoes( &bancoPerguntas);
 
-    perguntaAtual.nivel = 1;
-    strcpy(perguntaAtual.enunciado, "Qual é o país conhecido como o berço do futebol? 💂🏻");
-    strcpy(perguntaAtual.alternativas[0], "Brasil");
-    strcpy(perguntaAtual.alternativas[1], "Inglaterra");
-    strcpy(perguntaAtual.alternativas[2], "Alemanha");
-    strcpy(perguntaAtual.alternativas[3], "Espanha");
-    perguntaAtual.qtdAlternativas = 4;
-    perguntaAtual.respostaCorreta = 1;
-    strcpy(perguntaAtual.dica, "O esporte surgiu no século XIX em uma ilha europeia.");
-
-    printf("Nível %d\n", perguntaAtual.nivel);
-    printf("%s\n", perguntaAtual.enunciado);
-    for (int i = 0; i < perguntaAtual.qtdAlternativas; i++) {
-        printf("%d) %s\n", i + 1, perguntaAtual.alternativas[i]);
+    // exemplo de uso
+    printf("Total de niveis: %d \n", bancoPerguntas.qtdNiveis);
+    for (int i = 0; i < bancoPerguntas.qtdNiveis; i++)
+    {
+        printf("Nivel: %d \n", bancoPerguntas.niveis[i].nivel);
+        printf("quantidade de perguntas: %d \n", bancoPerguntas.niveis[i].qtdPerguntas);
+        for (int j = 0; j < bancoPerguntas.niveis[i].qtdPerguntas; j++)
+        {
+            printf("pergunta: %s \n", bancoPerguntas.niveis[i].perguntas[j].enunciado);
+            for (int k = 0; k < bancoPerguntas.niveis[i].perguntas[j].qtdAlternativas; k++)
+            {
+                printf("alternativa %d: %s \n", k, bancoPerguntas.niveis[i].perguntas[j].alternativas[k]);
+            }
+        }
     }
-    printf("Dica: %s\n", perguntaAtual.dica);
-    printf("Resposta correta: %s\n", perguntaAtual.alternativas[perguntaAtual.respostaCorreta]);
 
     return 0;
 }
