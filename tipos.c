@@ -1,22 +1,22 @@
 struct tipoPergunta {
     int nivel;
     char enunciado[150];
-    char alternativas[150][150];
+    char alternativas[10][150]; 
     int qtdAlternativas;
     int respostaCorreta;
     char dica[150];
 };
 
-struct tipoListaPerguntas{
+struct tipoListaPerguntas {
     int nivel;
-    int qtdNiveis;
-    struct tipoPergunta pergunta[150];
+    struct tipoPergunta perguntas[150]; 
     int qtdPerguntas;
 };
 
-struct tipoBancoPerguntas{
-    struct tipoListaPerguntas perguntasNivel[150];
+struct tipoBancoPerguntas {
+    struct tipoListaPerguntas niveis[10]; 
     int qtdNiveis;
 };
-// struct tipoListaPerguntas bancoPerguntas[];
-// bancoPerguntas[nivel da pergunta].pergunta[numero da pergunta].enunciado;
+
+
+// bancoPerguntas.niveis[indiceNivel].perguntas[indicePergunta].enunciado os niveis começa com o 0 exemplo: nivel 0, 1, 2,3...

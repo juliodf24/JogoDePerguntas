@@ -1,106 +1,109 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "bibliotecas/cJSON.h"
 #include "bibliotecas/cJSON.c"
 #include "tipos.c"
 
+// Função para ler o conteúdo do jason e retornar uma string
 char *lerArquivo(const char *nomeArquivo)
 {
     FILE *arquivo = fopen(nomeArquivo, "rb");
     if (!arquivo)
+    {
+        perror("Erro ao abrir arquivo");
         return NULL;
+    }
 
     fseek(arquivo, 0, SEEK_END);
     long tamanho = ftell(arquivo);
     rewind(arquivo);
 
     char *conteudo = malloc(tamanho + 1);
+    if (!conteudo)
+    {
+        fclose(arquivo);
+        perror("Erro ao alocar memória para o conteúdo do arquivo");
+        return NULL;
+    }
+
     fread(conteudo, 1, tamanho, arquivo);
     conteudo[tamanho] = '\0';
 
     fclose(arquivo);
     return conteudo;
 }
-int preencherBancoPerguntas(struct tipoBancoPerguntas *bancoPerguntas, char *conteudo)
+
+// Função para criar o banco de questões a partir do json
+int CriarBancoQuestoes(struct tipoBancoPerguntas *bancoPerguntas)
 {
-    if (!conteudo)
+    char *jsonTexto= lerArquivo("perguntasTeste.json");
+    if (!jsonTexto)
     {
-        printf("Erro ao ler o Json!\n");
+        printf("Erro: texto JSON nulo!\n");
         return 1;
     }
-    cJSON *json = cJSON_Parse(conteudo);
+
+    cJSON *json = cJSON_Parse(jsonTexto);
     if (!json)
     {
-        printf("Erro ao fazer parse do JSON\n");
-        free(conteudo);
+        printf("Erro ao fazer parse do JSON!\n");
         return 1;
     }
-    // primeiro nivel
-    printf("gravando na variavelan");
+
+    // camada 1
     cJSON *questoes = cJSON_GetObjectItem(json, "questoes");
-    if (!questoes)
-    {
-        printf("Erro: campo 'questoes' não encontrado no JSON\\n");
-        cJSON_Delete(json);
-        free(conteudo);
-        return 1;
-    }
-    int quantidadeNiveis = cJSON_GetArraySize(questoes);
-    bancoPerguntas->qtdNiveis = quantidadeNiveis;
 
-    for (int i = 0; i < quantidadeNiveis; i++)
+    int quantidade = cJSON_GetArraySize(questoes);
+    bancoPerguntas->qtdNiveis = quantidade;
+
+    for (int i = 0; i < quantidade; i++)
     {
-        // segundo nivel
-        cJSON *perguntasDeUmNivel = cJSON_GetArrayItem(questoes, i);
-        bancoPerguntas->perguntasNivel[i].nivel = cJSON_GetObjectItem(perguntasDeUmNivel, "nivel")->valueint;
-        cJSON *perguntas = cJSON_GetObjectItem(perguntasDeUmNivel, "perguntas");
-        int quantidadePerguntas = cJSON_GetArraySize(perguntas);
-        bancoPerguntas->perguntasNivel[i].qtdPerguntas = quantidadePerguntas;
-        for (int j = 0; j < quantidadePerguntas; j++)
+        cJSON *perguntas = cJSON_GetArrayItem(questoes, i);
+        cJSON *nivel = cJSON_GetObjectItem(perguntas, "nivel");
+        bancoPerguntas->niveis[nivel->valueint].nivel = nivel->valueint;
+
+        cJSON *perguntasDoNivel = cJSON_GetObjectItem(perguntas, "perguntas");
+        int quantidadePerguntasDoNivel = cJSON_GetArraySize(perguntasDoNivel);
+        bancoPerguntas->niveis[i].qtdPerguntas = quantidadePerguntasDoNivel;
+
+        for (int j = 0; j < quantidadePerguntasDoNivel; j++)
         {
-            // terceiro nivel
-            cJSON *pergunta = cJSON_GetArrayItem(perguntas, j);
-            bancoPerguntas->perguntasNivel[i].pergunta[j].nivel = bancoPerguntas->perguntasNivel[i].nivel;
-            strcpy(bancoPerguntas->perguntasNivel[i].pergunta[j].enunciado, cJSON_GetObjectItem(pergunta, "enunciado")->valuestring);
-
-            cJSON *alternativas = cJSON_GetObjectItem(pergunta, "alternativas");
-            int qtdAlternativas = cJSON_GetArraySize(alternativas);
-            bancoPerguntas->perguntasNivel[i].pergunta[j].qtdAlternativas = qtdAlternativas;
-            for (int k = 0; k < qtdAlternativas; k++)
+            cJSON *perguntaNivel = cJSON_GetArrayItem(perguntasDoNivel, j);
+            cJSON *enunciado = cJSON_GetObjectItem(perguntaNivel, "enunciado");
+            cJSON *dica = cJSON_GetObjectItem(perguntaNivel, "dica");
+            strcpy(bancoPerguntas->niveis[i].perguntas[j].enunciado, enunciado->valuestring);
+            strcpy(bancoPerguntas->niveis[i].perguntas[j].dica, dica->valuestring);
+            cJSON *alternativas = cJSON_GetObjectItem(perguntaNivel, "alternativas");
+            int quantidadeAlternativas = cJSON_GetArraySize(alternativas);
+            bancoPerguntas->niveis[i].perguntas[j].qtdAlternativas = quantidadeAlternativas;
+            for (int k = 0; k < quantidadeAlternativas; k++)
             {
-                // quarto nivel
                 cJSON *alternativa = cJSON_GetArrayItem(alternativas, k);
-                strcpy(bancoPerguntas->perguntasNivel[i].pergunta[j].alternativas[k], alternativa->valuestring);
+                strcpy(bancoPerguntas->niveis[i].perguntas[j].alternativas[k], alternativa->valuestring);
             }
-
-            strcpy(bancoPerguntas->perguntasNivel[i].pergunta[j].dica, cJSON_GetObjectItem(pergunta, "dica")->valuestring);
-            bancoPerguntas->perguntasNivel[i].pergunta[j].respostaCorreta = cJSON_GetObjectItem(pergunta, "resposta_correta")->valueint;
         }
     }
     cJSON_Delete(json);
-    free(conteudo);
     return 0;
 }
 
 int main()
 {
-    struct tipoBancoPerguntas bancoPerguntas;
-    char *conteudo = lerArquivo("perguntasTeste.json");
-    preencherBancoPerguntas(&bancoPerguntas, conteudo);
-    printf("Total de níveis: %s\n", conteudo);
-
+    struct tipoBancoPerguntas bancoPerguntas = {0};
+    CriarBancoQuestoes( &bancoPerguntas);
+    printf("Total de niveis: %d \n", bancoPerguntas.qtdNiveis);
     for (int i = 0; i < bancoPerguntas.qtdNiveis; i++)
     {
-        printf("Nível %d\n", bancoPerguntas.perguntasNivel[i].nivel);
-        for (int j = 0; j < bancoPerguntas.perguntasNivel[i].qtdPerguntas; j++)
+        printf("Nivel: %d \n", bancoPerguntas.niveis[i].nivel);
+        printf("quantidade de perguntas: %d \n", bancoPerguntas.niveis[i].qtdPerguntas);
+        for (int j = 0; j < bancoPerguntas.niveis[i].qtdPerguntas; j++)
         {
-            printf("%s\n", bancoPerguntas.perguntasNivel[i].pergunta[j].enunciado);
-            for (int k = 0; k < bancoPerguntas.perguntasNivel[i].pergunta[j].qtdAlternativas; k++)
+            printf("pergunta: %s \n", bancoPerguntas.niveis[i].perguntas[j].enunciado);
+            for (int k = 0; k < bancoPerguntas.niveis[i].perguntas[j].qtdAlternativas; k++)
             {
-                printf("%d) %s\n", k + 1, bancoPerguntas.perguntasNivel[i].pergunta[j].alternativas[k]);
+                printf("alternativa %d: %s \n", k, bancoPerguntas.niveis[i].perguntas[j].alternativas[k]);
             }
-            printf("Dica: %s\n", bancoPerguntas.perguntasNivel[i].pergunta[j].dica);
-            printf("Resposta correta: %s\n", bancoPerguntas.perguntasNivel[i].pergunta[j].alternativas[bancoPerguntas.perguntasNivel[i].pergunta[j].respostaCorreta]);
         }
     }
 
