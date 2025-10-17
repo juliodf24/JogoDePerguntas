@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include "bancoPerguntas.h"
-#include "bibliotecas/cJSON.h"
+#include "../bibliotecas/cJSON.h"
 
 void lerAquivoJson(char** json){
     FILE* f; 
-    f = fopen("perguntasTeste.json", "r");
+    f = fopen("assets/perguntasTeste.json", "r");
     if(f == 0){
         printf("! Erro ao ler o Json. !\n\n");
         exit(1);
@@ -30,6 +30,8 @@ void lerAquivoJson(char** json){
 }
 
 void carregarBancoPerguntas(BANCO_PERGUNTAS* bancoPerguntas){
+    memset(bancoPerguntas, 0, sizeof(BANCO_PERGUNTAS)); // limpa o bancoPerguntas
+    
     char* TextoJson;
     lerAquivoJson(&TextoJson);
     if(TextoJson == NULL){
@@ -39,6 +41,7 @@ void carregarBancoPerguntas(BANCO_PERGUNTAS* bancoPerguntas){
     cJSON *json = cJSON_Parse(TextoJson);
     if (!json){
         printf("Erro ao fazer parse do JSON!\n");
+        free(json);
         exit(1);
     }
 
@@ -86,8 +89,5 @@ void carregarBancoPerguntas(BANCO_PERGUNTAS* bancoPerguntas){
 
 
     }
-
-    
-    
     free(json);
 }

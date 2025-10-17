@@ -2,8 +2,9 @@
 #include <string.h>
 #include "bancoPerguntas.h"
 
+BANCO_PERGUNTAS bancoPerguntas;
+
 int main() {
-    BANCO_PERGUNTAS bancoPerguntas;
     carregarBancoPerguntas(&bancoPerguntas);
 
     for(int i = 0; i< bancoPerguntas.qtdNiveis; i++){
