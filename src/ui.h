@@ -1,0 +1,2 @@
+void imprimirBola();
+void imprimirNomeJogo();
