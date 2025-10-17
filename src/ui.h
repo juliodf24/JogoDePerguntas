@@ -1,2 +1,2 @@
 void imprimirBola();
-void imprimirNomeJogo();
+int imprimirNomeJogo();

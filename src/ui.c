@@ -47,7 +47,8 @@ void imprimirBola(){
         printf("\033[0m\n\n");
 }
 
-void imprimirNomeJogo(){
+int imprimirNomeJogo(){
+    char simounao;
     printf("       _                           _                                              \n");
     printf("      | |                         (_)                                             \n");
     printf("   ___| |__   __ _ _ __ ___  _ __  _  ___  _ __  ___    __ _  __ _ _ __ ___   ___ \n");
@@ -56,5 +57,24 @@ void imprimirNomeJogo(){
     printf("  \\___|_| |_|\\__,_|_| |_| |_| .__/|_|\\___/|_| |_|___/  \\__, |\\__,_|_| |_| |_|\\___|\n");
     printf("                            | |                         __/ |                     \n");
     printf("                            |_|                        |___/                      \n");
+    printf("⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆\n");
+    printf("                                             Bem vindo ao Champions Game, um quiz de futebol em C!\n");
+    printf("\n");
+    printf(                               "O jogo possui 10 níveis, a cada pergunta certa você avança para o próximo nível.\n");
+    printf("\n");
+    printf("           A cada partida, você tem direito a uma dica, trocar a pergunta uma vez ou já pular para o próximo nível, também apenas uma vez\n");
+    printf("\n");
+    printf("                                        Está pronto para começar sua jornada rumo ao título de campeão? s/n\n");
+    printf("⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆⚽ 🏆\n");
+    scanf(" %c", &simounao);
+    switch(simounao){
+        case 's':
+        case 'S':
+        break;
+        default: return 0;
+    }
+
+
+
 
 }
