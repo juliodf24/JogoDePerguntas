@@ -1,36 +1,36 @@
 {
-  "questoes": [
+  "niveis": [
     {
       "nivel": 1,
       "perguntas": [
         {
           "enunciado": "Qual é o país conhecido como o berço do futebol? 💂🏻",
-          "alternativas": ["Brasil", "Inglaterra", "Alemanha", "Espanha"],
-          "resposta_correta": 1,
+          "alternativa": ["Brasil", "Inglaterra", "Alemanha", "Espanha"],
+          "resposta": 1,
           "dica": "O esporte surgiu no século XIX em uma ilha europeia."
         },
         {
           "enunciado": "Quantos jogadores um time de futebol tem em campo 🏃🏼‍♂️?",
-          "alternativas": ["10", "11", "12", "9"],
-          "resposta_correta": 1,
+          "alternativa": ["10", "11", "12", "9"],
+          "resposta": 1,
           "dica": "Inclui o goleiro nessa contagem."
         },
         {
           "enunciado": "Quem é conhecido como 'Rei do Futebol 👑'?",
-          "alternativas": ["Pelé", "Maradona", "Cristiano Ronaldo", "Messi"],
-          "resposta_correta": 0,
+          "alternativa": ["Pelé", "Maradona", "Cristiano Ronaldo", "Messi"],
+          "resposta": 0,
           "dica": "É brasileiro e tricampeão mundial."
         },
         {
           "enunciado": "Qual seleção venceu a Copa do Mundo de 2002? 🏆",
-          "alternativas": ["Alemanha", "Brasil", "França", "Argentina"],
-          "resposta_correta": 1,
+          "alternativa": ["Alemanha", "Brasil", "França", "Argentina"],
+          "resposta": 1,
           "dica": "Foi o quinto título 5️⃣ da seleção."
         },
         {
           "enunciado": "Qual jogador é famoso por usar a camisa 10 na seleção argentina e no Barcelona? 👽",
-          "alternativas": ["Riquelme", "Messi", "Di María", "Batistuta"],
-          "resposta_correta": 1,
+          "alternativa": ["Riquelme", "Messi", "Di María", "Batistuta"],
+          "resposta": 1,
           "dica": "É um dos maiores do Barcelona, conhecido pelo apelido de ET."
         }
       ]
@@ -40,32 +40,32 @@
       "perguntas": [
         {
           "enunciado": "Qual é o maior estádio do Brasil? 🏟️",
-          "alternativas": ["Morumbi", "Mineirão", "Maracanã", "Beira-Rio"],
-          "resposta_correta": 2,
+          "alternativa": ["Morumbi", "Mineirão", "Maracanã", "Beira-Rio"],
+          "resposta": 2,
           "dica": "Fica no Rio de Janeiro 🏖️."
         },
         {
           "enunciado": "Em que país foi realizada a Copa do Mundo de 2018 🐻‍❄️?",
-          "alternativas": ["Brasil", "Alemanha", "Rússia", "Catar"],
-          "resposta_correta": 2,
+          "alternativa": ["Brasil", "Alemanha", "Rússia", "Catar"],
+          "resposta": 2,
           "dica": "A final aconteceu em Moscou🪆."
         },
         {
           "enunciado": "Qual time brasileiro é conhecido como 'Timão' 🦅?",
-          "alternativas": ["Flamengo", "Santos", "Corinthians", "Palmeiras"],
-          "resposta_correta": 2,
+          "alternativa": ["Flamengo", "Santos", "Corinthians", "Palmeiras"],
+          "resposta": 2,
           "dica": "Tem uma torcida chamada 'Gaviões da Fiel'. Só é menor que a do Flamengo, conhecida como Nação Rubro Negra 🔴 ⚫."
         },
         {
           "enunciado": "Quem marcou o gol do título do Brasil na Copa de 2002? ⚽ 🏆",
-          "alternativas": ["Ronaldinho", "Ronaldo Fenômeno", "Rivaldo", "Kaká"],
-          "resposta_correta": 1,
+          "alternativa": ["Ronaldinho", "Ronaldo Fenômeno", "Rivaldo", "Kaká"],
+          "resposta": 1,
           "dica": "Fez dois gols na final contra a Alemanha."
         },
         {
           "enunciado": "Qual jogador português ganhou cinco Bolas de Ouro? ⚽ 🥇",
-          "alternativas": ["Luís Figo", "Cristiano Ronaldo", "Eusébio", "Bruno Fernandes"],
-          "resposta_correta": 1,
+          "alternativa": ["Luís Figo", "Cristiano Ronaldo", "Eusébio", "Bruno Fernandes"],
+          "resposta": 1,
           "dica": "Já jogou por Manchester United, Real Madrid e Juventus. É o robozão 🤖 SIUUU!"
         }
       ]
@@ -75,32 +75,32 @@
       "perguntas": [
         {
           "enunciado": "Qual clube revelou Neymar? ✋🏼😜🤚🏼",
-          "alternativas": ["Flamengo", "Santos", "Palmeiras", "Grêmio"],
-          "resposta_correta": 1,
+          "alternativa": ["Flamengo", "Santos", "Palmeiras", "Grêmio"],
+          "resposta": 1,
           "dica": "O mesmo clube onde Pelé 👑 começou."
         },
         {
           "enunciado": "Em que ano o Brasil sediou a primeira Copa do Mundo?📆",
-          "alternativas": ["1950", "1970", "1994", "2014"],
-          "resposta_correta": 0,
+          "alternativa": ["1950", "1970", "1994", "2014"],
+          "resposta": 0,
           "dica": "O Uruguai venceu a final no Maracanã🏟️."
         },
         {
           "enunciado": "Quem foi o técnico do Brasil na Copa de 1994👨🏼‍🏫?",
-          "alternativas": ["Parreira", "Zagallo", "Felipão", "Tite"],
-          "resposta_correta": 0,
+          "alternativa": ["Parreira", "Zagallo", "Felipão", "Tite"],
+          "resposta": 0,
           "dica": "Conquistou o tetracampeonato🏆."
         },
         {
           "enunciado": "Qual é o apelido da seleção italiana🍕?",
-          "alternativas": ["La Roja", "Azzurra", "Les Bleus", "Oranje"],
-          "resposta_correta": 1,
+          "alternativa": ["La Roja", "Azzurra", "Les Bleus", "Oranje"],
+          "resposta": 1,
           "dica": "O nome faz referência à cor azul🟦."
         },
         {
           "enunciado": "Quem foi o artilheiro da Copa do Mundo de 2006? 🥅",
-          "alternativas": ["Klose", "Ronaldo", "Henry", "Totti"],
-          "resposta_correta": 0,
+          "alternativa": ["Klose", "Ronaldo", "Henry", "Totti"],
+          "resposta": 0,
           "dica": "Jogava pela Alemanha 🍺."
         }
       ]
@@ -110,32 +110,32 @@
       "perguntas": [
         {
           "enunciado": "Qual seleção venceu a primeira Copa do Mundo da história? 🧓🏻",
-          "alternativas": ["Brasil", "Argentina", "Uruguai", "Itália"],
-          "resposta_correta": 2,
+          "alternativa": ["Brasil", "Argentina", "Uruguai", "Itália"],
+          "resposta": 2,
           "dica": "Foi em 1930📆."
         },
         {
           "enunciado": "Qual clube ganhou a Libertadores de 2020 🏆?",
-          "alternativas": ["Palmeiras", "Flamengo", "River Plate", "Santos"],
-          "resposta_correta": 0,
+          "alternativa": ["Palmeiras", "Flamengo", "River Plate", "Santos"],
+          "resposta": 0,
           "dica": "Venceu o Santos na final."
         },
         {
           "enunciado": "Qual jogador brasileiro ficou famoso pela comemoração de fazer muque (💪🏻) com os dois braços?",
-          "alternativas": ["Richarlison", "Gabigol", "Neymar", "Vinícius Jr."],
-          "resposta_correta": 1,
+          "alternativa": ["Richarlison", "Gabigol", "Neymar", "Vinícius Jr."],
+          "resposta": 1,
           "dica": "Fez em praticamente todos os gols no Flamengo 🔴 ⚫."
         },
         {
           "enunciado": "Quem marcou o gol ⚽ do título do Mundial de Clubes 2012 pelo Corinthians?",
-          "alternativas": ["Guerrero", "Danilo", "Sheik", "Paulinho"],
-          "resposta_correta": 0,
+          "alternativa": ["Guerrero", "Danilo", "Sheik", "Paulinho"],
+          "resposta": 0,
           "dica": "O adversário era o Chelsea 🦁 🟦."
         },
         {
           "enunciado": "Em que país nasceu o craque Luka Modrić? 🌍",
-          "alternativas": ["Sérvia", "Croácia", "Eslovênia", "Bósnia"],
-          "resposta_correta": 1,
+          "alternativa": ["Sérvia", "Croácia", "Eslovênia", "Bósnia"],
+          "resposta": 1,
           "dica": "Levou sua seleção à final em 2018 e ela acabou em 2° 🥈."
         }
       ]
@@ -145,32 +145,32 @@
       "perguntas": [
         {
           "enunciado": "Qual clube revelou Cristiano Ronaldo? 🤖",
-          "alternativas": ["Real Madrid", "Benfica", "Sporting", "Manchester United"],
-          "resposta_correta": 2,
+          "alternativa": ["Real Madrid", "Benfica", "Sporting", "Manchester United"],
+          "resposta": 2,
           "dica": "É um clube que fica na Península Ibérica 🏰."
         },
         {
           "enunciado": "Qual país sediou a Copa do Mundo de 1986? 🌮",
-          "alternativas": ["Espanha", "México", "Itália", "Argentina"],
-          "resposta_correta": 1,
+          "alternativa": ["Espanha", "México", "Itália", "Argentina"],
+          "resposta": 1,
           "dica": "Foi o palco da 'Mão de Deus', gol de mão 🖐🏼 pelo Maradona."
         },
         {
           "enunciado": "Quem foi o capitão do Brasil na Copa de 2002?",
-          "alternativas": ["Cafu", "Ronaldo", "Rivaldo", "Lucio"],
-          "resposta_correta": 0,
+          "alternativa": ["Cafu", "Ronaldo", "Rivaldo", "Lucio"],
+          "resposta": 0,
           "dica": "Ergueu a taça no Japão 🏯🈹."
         },
         {
           "enunciado": "Qual clube europeu é apelidado de 'Los Blancos' ⚪?",
-          "alternativas": ["Barcelona", "Real Madrid", "Sevilla", "Atlético de Madrid"],
-          "resposta_correta": 1,
+          "alternativa": ["Barcelona", "Real Madrid", "Sevilla", "Atlético de Madrid"],
+          "resposta": 1,
           "dica": "É o maior campeão da Champions League 🏆."
         },
         {
           "enunciado": "Qual jogador brasileiro ganhou o prêmio Puskás em 2015? 🎮",
-          "alternativas": ["Neymar", "Wendell Lira", "Oscar", "Hulk"],
-          "resposta_correta": 1,
+          "alternativa": ["Neymar", "Wendell Lira", "Oscar", "Hulk"],
+          "resposta": 1,
           "dica": "Jogava pelo Goianésia na época e atualmente é jogador profissional de FIFA."
         }
       ]
@@ -180,32 +180,32 @@
       "perguntas": [
         {
           "enunciado": "Em que ano o Brasil conquistou seu primeiro título mundial? 🏆 📆",
-          "alternativas": ["1950", "1958", "1962", "1970"],
-          "resposta_correta": 1,
+          "alternativa": ["1950", "1958", "1962", "1970"],
+          "resposta": 1,
           "dica": "Foi na Suécia 🟡 🔵."
         },
         {
           "enunciado": "Qual técnico levou o Grêmio ao título da Libertadores em 2017 🧉?",
-          "alternativas": ["Tite", "Felipão", "Renato Gaúcho", "Abel Braga"],
-          "resposta_correta": 2,
+          "alternativa": ["Tite", "Felipão", "Renato Gaúcho", "Abel Braga"],
+          "resposta": 2,
           "dica": "Também foi ídolo do clube como jogador 🏃🏼."
         },
         {
           "enunciado": "Quantos títulos de Champions League tem o Real Madrid (até 2023) 🏆?",
-          "alternativas": ["10", "12", "14", "15"],
-          "resposta_correta": 2,
+          "alternativa": ["10", "12", "14", "15"],
+          "resposta": 2,
           "dica": "Venceu o Liverpool na última conquista 🏆."
         },
         {
           "enunciado": "Quem marcou o gol do título da Copa de 2014? 🏆 ⚽",
-          "alternativas": ["Messi", "Gotze", "Kroos", "Müller"],
-          "resposta_correta": 1,
+          "alternativa": ["Messi", "Gotze", "Kroos", "Müller"],
+          "resposta": 1,
           "dica": "Foi na prorrogação contra a Argentina 💃🏼🕺🏼."
         },
         {
           "enunciado": "Qual time brasileiro tem mais títulos da Copa do Brasil? 🏆 🟢 🟡 🔵",
-          "alternativas": ["Flamengo", "Cruzeiro", "Grêmio", "Palmeiras"],
-          "resposta_correta": 1,
+          "alternativa": ["Flamengo", "Cruzeiro", "Grêmio", "Palmeiras"],
+          "resposta": 1,
           "dica": "Tem 6 conquistas 🏅."
         }
       ]
@@ -215,32 +215,32 @@
       "perguntas": [
         {
           "enunciado": "Qual seleção venceu a Copa do Mundo de 1966 🧓🏼 📆?",
-          "alternativas": ["Brasil", "Alemanha", "Inglaterra", "Itália"],
-          "resposta_correta": 2,
+          "alternativa": ["Brasil", "Alemanha", "Inglaterra", "Itália"],
+          "resposta": 2,
           "dica": "Foi a única conquista deles até hoje 🤣."
         },
         {
           "enunciado": "Quem foi o artilheiro da Copa do Mundo de 2010? ⚽ 🥅",
-          "alternativas": ["Forlán", "Villa", "Müller", "Sneijder"],
-          "resposta_correta": 2,
+          "alternativa": ["Forlán", "Villa", "Müller", "Sneijder"],
+          "resposta": 2,
           "dica": "É alemão e também brilhou em 2014...😢"
         },
         {
           "enunciado": "Qual jogador fez o 'gol de barriga' que deu título ao Flamengo em 1995? 😜",
-          "alternativas": ["Romário", "Bebeto", "Edmundo", "Sávio"],
-          "resposta_correta": 0,
+          "alternativa": ["Romário", "Bebeto", "Edmundo", "Sávio"],
+          "resposta": 0,
           "dica": "Era o camisa 11 do Mengão e tinha uma amizade que depois virou rivalidade 🔴 ⚫."
         },
         {
           "enunciado": "Em que cidade fica o estádio Anfield? 🏟️",
-          "alternativas": ["Manchester", "Londres", "Liverpool", "Leeds"],
-          "resposta_correta": 2,
+          "alternativa": ["Manchester", "Londres", "Liverpool", "Leeds"],
+          "resposta": 2,
           "dica": "É o estádio do time dos Reds 🟥."
         },
         {
           "enunciado": "Qual jogador marcou o gol 1000 de Pelé 👑⚽?",
-          "alternativas": ["Contra o Vasco", "Contra o Flamengo", "Contra o Corinthians", "Contra o Botafogo"],
-          "resposta_correta": 0,
+          "alternativa": ["Contra o Vasco", "Contra o Flamengo", "Contra o Corinthians", "Contra o Botafogo"],
+          "resposta": 0,
           "dica": "Foi no Maracanã 🏟️."
         }
       ]
@@ -250,32 +250,32 @@
       "perguntas": [
         {
           "enunciado": "Qual seleção eliminou o Brasil na Copa de 1982? 🍝",
-          "alternativas": ["Itália", "Alemanha", "Argentina", "França"],
-          "resposta_correta": 0,
+          "alternativa": ["Itália", "Alemanha", "Argentina", "França"],
+          "resposta": 0,
           "dica": "Paolo Rossi marcou três gols...😭"
         },
         {
           "enunciado": "Qual clube foi campeão europeu em 1995 com jogadores como Kluivert e Seedorf? 🏆🟧",
-          "alternativas": ["Ajax", "Milan", "Juventus", "Barcelona"],
-          "resposta_correta": 0,
+          "alternativa": ["Ajax", "Milan", "Juventus", "Barcelona"],
+          "resposta": 0,
           "dica": "É um time holandês 🟧."
         },
         {
           "enunciado": "Quem foi o técnico campeão da Copa do Mundo de 1970 com o Brasil? 👨🏼‍🏫",
-          "alternativas": ["Zagallo", "Parreira", "Feola", "Saldanha"],
-          "resposta_correta": 0,
+          "alternativa": ["Zagallo", "Parreira", "Feola", "Saldanha"],
+          "resposta": 0,
           "dica": "Também foi campeão como jogador 🏃🏼."
         },
         {
           "enunciado": "Qual jogador marcou o 'gol do século' em 1986? 📆⚽",
-          "alternativas": ["Maradona", "Pelé", "Platini", "Zico"],
-          "resposta_correta": 0,
+          "alternativa": ["Maradona", "Pelé", "Platini", "Zico"],
+          "resposta": 0,
           "dica": "Driblou meio time inglês 🏃🏼💂."
         },
         {
           "enunciado": "Qual país sediou a Copa do Mundo de 1994? 🏆",
-          "alternativas": ["México", "EUA", "Itália", "França"],
-          "resposta_correta": 1,
+          "alternativa": ["México", "EUA", "Itália", "França"],
+          "resposta": 1,
           "dica": "A final foi decidida nos pênaltis 😰."
         }
       ]
@@ -285,32 +285,32 @@
       "perguntas": [
         {
           "enunciado": "Quem marcou o gol de ouro da França na Euro 2000? ⚽ 🏆",
-          "alternativas": ["Henry", "Trezeguet", "Zidane", "Vieira"],
-          "resposta_correta": 1,
+          "alternativa": ["Henry", "Trezeguet", "Zidane", "Vieira"],
+          "resposta": 1,
           "dica": "Foi contra a Itália 🍝 🍕."
         },
         {
           "enunciado": "Qual jogador detém o recorde de mais gols em Copas do Mundo? ⚽🌍",
-          "alternativas": ["Pelé", "Klose", "Ronaldo", "Müller"],
-          "resposta_correta": 1,
+          "alternativa": ["Pelé", "Klose", "Ronaldo", "Müller"],
+          "resposta": 1,
           "dica": "Fez 16 gols entre 2002 e 2014 😡."
         },
         {
           "enunciado": "Qual clube venceu a Champions League de 2005 com uma virada histórica? 🌠",
-          "alternativas": ["Chelsea", "Liverpool", "Milan", "Arsenal"],
-          "resposta_correta": 1,
+          "alternativa": ["Chelsea", "Liverpool", "Milan", "Arsenal"],
+          "resposta": 1,
           "dica": "Perdia de 3x0 e virou nos pênaltis 😮."
         },
         {
           "enunciado": "Quem foi o artilheiro da Copa do Mundo de 1998? ⚽ 🥅",
-          "alternativas": ["Suker", "Ronaldo", "Henry", "Batistuta"],
-          "resposta_correta": 0,
+          "alternativa": ["Suker", "Ronaldo", "Henry", "Batistuta"],
+          "resposta": 0,
           "dica": "Era croata, jogou no Real Madrid ⚪."
         },
         {
           "enunciado": "Qual técnico foi campeão da Champions League com Porto e Inter de Milão? 👨🏼‍🏫",
-          "alternativas": ["Ancelotti", "Guardiola", "Mourinho", "Benítez"],
-          "resposta_correta": 2,
+          "alternativa": ["Ancelotti", "Guardiola", "Mourinho", "Benítez"],
+          "resposta": 2,
           "dica": "É português e conhecido como 'The Special One' 👏🏼."
         }
       ]
@@ -320,38 +320,38 @@
       "perguntas": [
         {
           "enunciado": "Qual jogador marcou o gol do título europeu do Real Madrid em 2014? 👨🏼‍🦲 ⚽",
-          "alternativas": ["Bale", "Ramos", "Benzema", "Di María"],
-          "resposta_correta": 1,
+          "alternativa": ["Bale", "Ramos", "Benzema", "Di María"],
+          "resposta": 1,
           "dica": "Foi de cabeça no fim do jogo 🕗 😯."
         },
         {
           "enunciado": "Qual seleção tem o maior número de vice-campeonatos em Copas do Mundo? 🥈",
-          "alternativas": ["Alemanha", "Brasil", "Holanda", "Argentina"],
-          "resposta_correta": 0,
+          "alternativa": ["Alemanha", "Brasil", "Holanda", "Argentina"],
+          "resposta": 0,
           "dica": "Perdeu quatro finais 😂."
         },
         {
           "enunciado": "Qual time foi campeão mundial de clubes em 2006? 🌍🏆",
-          "alternativas": ["Internacional", "Barcelona", "Liverpool", "Milan"],
-          "resposta_correta": 0,
+          "alternativa": ["Internacional", "Barcelona", "Liverpool", "Milan"],
+          "resposta": 0,
           "dica": "Derrotou o Barcelona com gol de Adriano Gabiru 😎."
         },
         {
           "enunciado": "Quem foi eleito o melhor jogador da Copa do Mundo de 2014? ⚽🌟",
-          "alternativas": ["Messi", "James Rodríguez", "Neuer", "Robben"],
-          "resposta_correta": 0,
+          "alternativa": ["Messi", "James Rodríguez", "Neuer", "Robben"],
+          "resposta": 0,
           "dica": "Foi criticado mesmo recebendo o prêmio 🤔."
         },
         {
           "enunciado": "Qual seleção venceu a Copa América de 2021? 🇦🇷🏆",
-          "alternativas": ["Brasil", "Argentina", "Chile", "Uruguai"],
-          "resposta_correta": 1,
+          "alternativa": ["Brasil", "Argentina", "Chile", "Uruguai"],
+          "resposta": 1,
           "dica": "O título foi conquistado no Maracanã contra o Brasil 😢."
         },
         {
           "enunciado": "Qual jogador detém o recorde de mais gols oficiais na história do futebol? ⚽📈",
-          "alternativas": ["Pelé", "Messi", "Cristiano Ronaldo", "Romário"],
-          "resposta_correta": 2,
+          "alternativa": ["Pelé", "Messi", "Cristiano Ronaldo", "Romário"],
+          "resposta": 2,
           "dica": "Ele ainda joga e ultrapassou os 870 gols 🤖 SIUUU!"
         }
       ]
