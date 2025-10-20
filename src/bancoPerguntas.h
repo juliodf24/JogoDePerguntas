@@ -1,3 +1,6 @@
+#ifndef BANCO_PERGUNTAS_H
+#define BANCO_PERGUNTAS_H
+
 struct pergunta{
     char* enunciado;
     int qtdAlternativas;
@@ -19,5 +22,8 @@ struct bancoPerguntas{
 
 typedef struct bancoPerguntas BANCO_PERGUNTAS;
 
-void lerAquivoJson(char** json);
-void carregarBancoPerguntas(BANCO_PERGUNTAS* bancoPerguntas);
+void lerAquivoJson(char** json, char** caminhoArquivo);
+void carregarBancoPerguntas(BANCO_PERGUNTAS* bancoPerguntas,  char* caminhoArquivo);
+void liberarBancoPerguntas(BANCO_PERGUNTAS* banco);
+
+#endif
