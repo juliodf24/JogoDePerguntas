@@ -6,6 +6,7 @@
 void imprimirBola();
 int imprimirNomeJogo();
 void limparTela();
+void limparTela2();
 void imprimirPergunta(struct pergunta* p, int nivel, int vidas);
 void imprimirDica(const char* dica);
 void imprimirAcerto();

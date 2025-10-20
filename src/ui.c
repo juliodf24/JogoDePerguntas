@@ -73,11 +73,14 @@ int imprimirNomeJogo() {
     return (simounao == 's' || simounao == 'S');
 }
 
-void limparTela() {
+void limparTela2() {
     if (system("clear") != 0) {
-        // Se falhar, tenta o comando do Windows
         system("cls");
     }
+}
+
+void limparTela() {
+    printf("\033[2J\033[H");
 }
 
 void imprimirPergunta(struct pergunta* p, int nivel, int vidas) {

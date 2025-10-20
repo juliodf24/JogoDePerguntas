@@ -64,20 +64,17 @@ void jogar() {
 
             int opcao = atoi(entrada);
 
+
             switch (opcao) {
                 case 1: {
-                    int escolha;
-                    printf("\nDigite o número da alternativa: ");
-                    scanf(" %d", &escolha);
-
+                    int escolha = -21;
                     // char respBuf[32];
                     // if (!fgets(respBuf, sizeof(respBuf), stdin)) continue;
                     // respBuf[strcspn(respBuf, "\n")] = '\0';
                     
                     // int escolha = atoi(respBuf);
-                    
                     do{
-                        if(alternativaInvalida(escolha, p->qtdAlternativas)){
+                        if(alternativaInvalida(escolha, p->qtdAlternativas) && escolha != -21){
                             // Limpa 2 linhas
                             printf("\033[2A"); 
                             printf("\033[2K"); 
@@ -88,8 +85,8 @@ void jogar() {
                             printf("Opção inválida! Tente novamente.\n");
                         }
                         printf("Digite o número da alternativa: ");
-                        limparEntrada();
-                        scanf(" %d", &escolha);   
+                        scanf(" %d", &escolha); 
+                        limparEntrada();  
                         escolha -= 1;
                     } while(alternativaInvalida(escolha, p->qtdAlternativas));
 
