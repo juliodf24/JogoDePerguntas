@@ -1,6 +1,6 @@
 #ifndef BANCO_PERGUNTAS_H
 #define BANCO_PERGUNTAS_H
-
+// não altere
 struct pergunta{
     char* enunciado;
     int qtdAlternativas;

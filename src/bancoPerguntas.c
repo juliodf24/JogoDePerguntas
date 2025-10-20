@@ -3,7 +3,7 @@
 #include <string.h>
 #include "bancoPerguntas.h"
 #include "../bibliotecas/cJSON.h"
-
+// Não altere 
 void lerAquivoJson(char** json, char** caminhoArquivo){
     FILE* f; 
     f = fopen(*caminhoArquivo, "r");
