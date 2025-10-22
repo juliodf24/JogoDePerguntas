@@ -25,3 +25,4 @@
    gcc src/bancoPerguntas.c src/main.c src/ui.c  bibliotecas/cJSON.c -o main.out
    ```
 
+4

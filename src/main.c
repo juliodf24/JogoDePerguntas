@@ -62,6 +62,27 @@ void jogar() {
             entrada[strcspn(entrada, "\n")] = '\0';
             if (strlen(entrada) == 0) continue;
 
+            int valido = 1;
+            for (int i = 0; i < strlen(entrada); i++) {
+                if (entrada[i] < '0' || entrada[i] > '9') {
+                valido = 0;
+                break;
+                }
+            }
+
+            if (!valido) {
+                printf("\nCaractere inválido! Digite apenas números de 0 a 4.\n");
+                printf("Deseja tentar novamente (1) ou encerrar seção(0)? ");
+                char escolha[8];
+                if (!fgets(escolha, sizeof(escolha), stdin)) continue;
+                if (escolha[0] == '0') {
+                printf("\nVocê escolheu encerrar a sessão.\n");
+                sair = 1;
+            break; 
+            }
+            continue; 
+            }
+
             int opcao = atoi(entrada);
 
 
