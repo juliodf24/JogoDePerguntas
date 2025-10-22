@@ -238,10 +238,10 @@
           "dica": "É o estádio do time dos Reds 🟥."
         },
         {
-          "enunciado": "Qual jogador marcou o gol 1000 de Pelé 👑⚽?",
+          "enunciado": "Qual time que sofreu o gol que foi o 1000° de Pelé 👑⚽?",
           "alternativa": ["Contra o Vasco", "Contra o Flamengo", "Contra o Corinthians", "Contra o Botafogo"],
           "resposta": 0,
-          "dica": "Foi no Maracanã 🏟️."
+          "dica": "Foi no Rio de Janeiro 🏟️."
         }
       ]
     },
@@ -319,7 +319,7 @@
       "nivel": 10,
       "perguntas": [
         {
-          "enunciado": "Qual jogador marcou o gol do título europeu do Real Madrid em 2014? 👨🏼‍🦲 ⚽",
+          "enunciado": "Qual jogador do Real Madrid marcou o gol que empatou o jogo e o levou para a prorrogação na final da Champions League de 2014 contra o Atlético de Madrid? 👨🏼‍🦲 ⚽",
           "alternativa": ["Bale", "Ramos", "Benzema", "Di María"],
           "resposta": 1,
           "dica": "Foi de cabeça no fim do jogo 🕗 😯."

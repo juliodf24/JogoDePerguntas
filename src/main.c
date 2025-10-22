@@ -170,17 +170,11 @@ void jogar() {
                     limparEntrada();
                     continue;
 
-                case 4:
-                    printf("\nReexibindo pergunta...\n");
-                    limparEntrada();
-                    continue;
-
                 case 0:
                     printf("\nVocê escolheu sair.\n");
                     sair = 1;
                     break;
-
-                opcao_invalida:
+                    
                 default:
                     printf("\nOpção inválida!\n");
                     limparEntrada();

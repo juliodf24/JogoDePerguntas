@@ -67,8 +67,14 @@ int imprimirNomeJogo() {
     printf("\nVocê tem %s1 vida%s. Uma resposta errada e o jogo acaba!\n", VERMELHO, RESET);
     printf("Use sabiamente suas ações especiais (Dica, Troca e Pular — %suma vez cada%s).\n\n", AMARELO, RESET);
     printf("Está pronto para começar sua jornada rumo ao título de campeão? (s/n): ");
+    
+    scanf(" %c", &simounao);
+    
+    if (simounao!= 's'&& simounao!= 'S') {
+        printf("Que pena! Volte quando estiver pronto para vencer o Champions Game!\n");
+        return 0;
+    }
 
-    if (scanf(" %c", &simounao) != 1) return 0;
     while (getchar() != '\n');
     return (simounao == 's' || simounao == 'S');
 }
@@ -96,7 +102,7 @@ void imprimirPergunta(struct pergunta* p, int nivel, int vidas) {
 
     printf("---------------------------------------------\n");
     printf("❤️ Vidas: %d\n", vidas);
-    printf("Escolha: (1) Responder  (2) Ações especiais  (3) Estado  (4) Repetir  (0) Sair\n");
+    printf("Escolha: (1) Responder  (2) Ações especiais  (3) Progresso (0) Sair\n");
 }
 
 void imprimirDica(const char* dica) {
@@ -119,6 +125,21 @@ void imprimirVitoria() {
     limparTela();
     printf("\n%s🏆 PARABÉNS! VOCÊ É O CAMPEÃO DO CHAMPIONS GAME! 🏆%s\n", AMARELO, RESET);
     printf("%sVocê respondeu todas as perguntas corretamente!%s\n\n", VERDE, RESET);
+    printf("\033[1;33m");  
+
+    printf("     ___________\n");
+    printf("    '._==_==_=_.\'\n");
+    printf("    .-\\:      /-.\n");
+    printf("   | (|:.     |) |\n");
+    printf("    '-|:.     |-'\n");
+    printf("      \\::.    /\n");
+    printf("       '::. .'\n");
+    printf("         ) (\n");
+    printf("       _.' '._\n");
+    printf("      `\"\"\"\"\"\"\"`\n");
+
+    // Resetar cor
+    printf("\033[0m");
 }
 
 void imprimirDerrota() {
@@ -131,15 +152,14 @@ void mostrarMenu() {
     printf("\n%s--------- MENU ---------%s\n", AZUL, RESET);
     printf("1 - Responder pergunta\n");
     printf("2 - Usar ação especial\n");
-    printf("3 - Mostrar estado do jogo\n");
-    printf("4 - Exibir pergunta novamente\n");
+    printf("3 - Mostrar progresso do jogo\n");
     printf("0 - Sair\n");
     printf("-------------------------\n");
     printf("Escolha: ");
 }
 
 void mostrarEstado(int nivelAtual, int totalNiveis, int vidas, int disponivelDica, int disponivelTroca, int disponivelPular) {
-    printf("\n%s=== ESTADO DO JOGO ===%s\n", BRANCO, RESET);
+    printf("\n%s=== PROGRESSO DO JOGO ===%s\n", BRANCO, RESET);
     printf("Nível atual: %d/%d\n", nivelAtual, totalNiveis);
     printf("Vidas: %d\n", vidas);
     printf("Dica disponível: %s\n", disponivelDica ? "✅" : "❌");
