@@ -133,6 +133,8 @@ void jogar() {
                         printf("\nPressione ENTER...\n");
                         limparEntrada();
                         continue;
+                    }else if (a==0){
+                        continue;
                     } else if (a != 0) {
                         printf("\nAção não disponível ou já usada.\n");
                         limparEntrada();
