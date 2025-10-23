@@ -5,6 +5,7 @@
 #include "bancoPerguntas.h"
 #include "main.h"
 #include "ui.h"
+#include <ctype.h>
 
 #define RESET     "\033[0m"
 #define VERMELHO  "\033[1;31m"
@@ -76,7 +77,7 @@ void jogar() {
             }
 
             if (!valido) {
-                printf("\nCaractere inválido! Digite apenas números de 0 a 4.\n");
+                printf("\nCaractere inválido! Digite apenas números de 0 a 3.\n");
                 printf("Deseja tentar novamente (1) ou encerrar seção(0)? ");
                 char escolha[8];
                 if (!fgets(escolha, sizeof(escolha), stdin)) continue;
@@ -94,11 +95,6 @@ void jogar() {
             switch (opcao) {
                 case 1: {
                     int escolha = -21;
-                    // char respBuf[32];
-                    // if (!fgets(respBuf, sizeof(respBuf), stdin)) continue;
-                    // respBuf[strcspn(respBuf, "\n")] = '\0';
-                    
-                    // int escolha = atoi(respBuf);
                     do{
                         if(alternativaInvalida(escolha, p->qtdAlternativas) && escolha != -21){
                             // Limpa 2 linhas
@@ -137,6 +133,9 @@ void jogar() {
                     if (!fgets(acaoBuf, sizeof(acaoBuf), stdin)) continue;
                     int a = atoi(acaoBuf);
 
+                    //fazer verificacao de caracter invalido
+
+
                     if (a == 1 && disponivelPular) {
                         disponivelPular = 0;
                         jogador.nNivel++;
@@ -170,6 +169,7 @@ void jogar() {
                         printf("\nAção não disponível ou já usada.\n");
                         limparEntrada();
                         continue;
+
                     }
                     break;
                 }
@@ -181,11 +181,21 @@ void jogar() {
                     continue;
 
                 case 0:
-                    printf("\nVocê escolheu sair.\n");
+                    printf("Tem certeza que deseja sair? (s/n)\n");
+                    char confirma;
+                    scanf(" %c", &confirma);
+                    if(confirma!= 's'&& confirma!= 'S' && confirma!= 'n' && confirma!= 'N'){
+                        printf("\nCaractere inválido! Digite 's' para sim ou 'n' para não.\n");
+                        continue;
+                    }
+                    else if (confirma == 's' || confirma == 'S') {
                     sair = 1;
                     break;
-                    
-                default:
+                    } else if(confirma == 'n' || confirma == 'N'){
+                        continue;
+                    }
+
+                    default: 
                     printf("\nOpção inválida!\n");
                     limparEntrada();
                     continue;

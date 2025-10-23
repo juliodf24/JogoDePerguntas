@@ -10,7 +10,6 @@ void limparTela2();
 void imprimirPergunta(struct pergunta* p, int nivel, int vidas);
 void imprimirDica(const char* dica);
 void imprimirAcerto();
-void imprimirErro();
 void imprimirVitoria();
 void imprimirDerrota();
 void mostrarMenu();

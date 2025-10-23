@@ -66,12 +66,14 @@ int imprimirNomeJogo() {
     printf("%s  \\___|_| |_|\\__,_|_| |_| |_| .__/|_|\\___/|_| |_|___/  \\__, |\\__,_|_| |_| |_|\\___|%s\n", BRANCO, RESET);
     printf("%s                            | |                         __/ |                     %s\n", BRANCO, RESET);
     printf("%s                            |_|                        |___/                      %s\n", BRANCO, RESET);
-    printf("%s⚽🏆 Bem-vindo ao Champions Game — o quiz de futebol definitivo! ⚽🏆%s\n", AMARELO, RESET);
+    printf("%s⚽🏆 Bem-vindo ao Champions Game — o quiz de futebol que definirá se você é o mestre em futebol! ⚽🏆%s\n", AMARELO, RESET);
     printf("\nVocê tem %s1 vida%s. Uma resposta errada e o jogo acaba!\n", VERMELHO, RESET);
     printf("Use sabiamente suas ações especiais (Dica, Troca e Pular — %suma vez cada%s).\n\n", AMARELO, RESET);
     printf("Está pronto para começar sua jornada rumo ao título de campeão? (s/n): ");
     
     scanf(" %c", &simounao);
+
+     //fazer verificacao de caracter invalido
     
     if (simounao!= 's'&& simounao!= 'S') {
         printf("Que pena! Volte quando estiver pronto para vencer o Champions Game!\n");
