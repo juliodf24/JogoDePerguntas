@@ -134,6 +134,14 @@ void jogar() {
                     int a = atoi(acaoBuf);
 
                     //fazer verificacao de caracter invalido
+                    if(scanf("%d",&a)!=1){
+                        printf("'\nOpção inválida! Tente novamente.\n");
+                        continue;
+                    }
+                    if(a<0||a>3){
+                        printf("\nOpção inválida! Tente novamente.\n");
+                        continue;
+                    }
 
 
                     if (a == 1 && disponivelPular) {
