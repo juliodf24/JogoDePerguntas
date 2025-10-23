@@ -6,8 +6,13 @@
 #include "main.h"
 #include "ui.h"
 
+#define RESET     "\033[0m"
+#define VERMELHO  "\033[1;31m"
+
+
 BANCO_PERGUNTAS bancoPerguntas;
 JOGADOR jogador;
+
 
 int main() {
     srand((unsigned) time(NULL));
@@ -115,8 +120,13 @@ void jogar() {
                         imprimirAcerto();
                         jogador.nNivel++;
                     } else {
-                        jogador.nVida--;
-                        imprimirErro();
+                        printf("\n%s❌ Resposta errada! Você perdeu uma vida!%s\n", VERMELHO, RESET);
+                        printf("\n\033[1;32mA alternativa correta era: %c) %s\033[0m\n",
+                            'A' + p->resposta, p->alternativa[p->resposta]);
+                        printf("Pressione ENTER para continuar...\n");
+                        getchar();
+                     jogador.nVida--;
+                    
                     }
                     break;
                 }

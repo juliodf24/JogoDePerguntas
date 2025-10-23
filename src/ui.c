@@ -14,6 +14,9 @@
 #define BRANCO    "\033[1;37m"
 
 void imprimirBola() {
+    printf("\n");
+    printf("\n");
+    printf("\n");
     printf("\033[1;32m");
     printf("                                   _,aaadP\"\"\"\"\"\"Ybaaaa,,_\n");
     printf("                                ,adP,__,,,aaaadP\"\"\"\"\"Y888888a,_\n");
@@ -115,12 +118,6 @@ void imprimirAcerto() {
     getchar();
 }
 
-void imprimirErro() {
-    printf("\n%s❌ Resposta errada! Você perdeu uma vida!%s\n", VERMELHO, RESET);
-    printf("Pressione ENTER para continuar...\n");
-    getchar();
-}
-
 void imprimirVitoria() {
     limparTela();
     printf("\n%s🏆 PARABÉNS! VOCÊ É O CAMPEÃO DO CHAMPIONS GAME! 🏆%s\n", AMARELO, RESET);
@@ -146,6 +143,7 @@ void imprimirDerrota() {
     limparTela();
     printf("\n%s💀 FIM DE JOGO! Suas vidas acabaram.%s\n", VERMELHO, RESET);
     printf("%sTente novamente e mostre que é um verdadeiro campeão!%s\n", AMARELO, RESET);
+    
 }
 
 void mostrarMenu() {
