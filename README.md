@@ -1,5 +1,5 @@
 # JogoDePerguntas - Guia de Contribuição  
-
+teste
 ## Preparando o Ambiente  
 
 1. Abra o **VS Code** em uma pasta vazia.  
