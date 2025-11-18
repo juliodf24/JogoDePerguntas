@@ -43,7 +43,7 @@ void limparEntrada(){
     while ((c = getchar()) != '\n' && c != EOF);
 }
 int alternativaInvalida(int escolha, int qtdAlternativas){ 
-    if(escolha < 0 || escolha > qtdAlternativas){
+    if(escolha <= 0 || escolha > qtdAlternativas){
         return 1;
     } else {
         return 0;
