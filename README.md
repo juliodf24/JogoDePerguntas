@@ -1,28 +1,50 @@
-# JogoDePerguntas - Guia de Contribuição  
+# JogoDePerguntas
 
-## Preparando o Ambiente  
 
-1. Abra o **VS Code** em uma pasta vazia.  
-2. Clone o repositório com o comando:  
-   ```bash
-   git clone https://github.com/juliodf24/JogoDePerguntas.git
-   ```
-3. Pressione `Ctrl + K + O` e selecione a pasta **JogoDePerguntas**.  
-4. Atualize o código com:  
-   ```bash
-   git pull
-   ```
-   > Esse comando garante que você está com a versão mais recente do projeto.  
 
- **Ambiente preparado!**
+## Instalação
+Clone o repositório e compile os arquivos `.c` normalmente:
 
----
+```bash
+git clone https://github.com/juliodf24/JogoDePerguntas.git
+mkdir build 
+cd build
+cmake ..
+make
+```
+para iniciar o jogo basta executar o arquivo `jogoperguntas`:
 
-## Compilando o Código 
+```bash
+./jogoperguntas
+```
 
-1. execute:  
-   ```bash
-   gcc src/bancoPerguntas.c src/main.c src/ui.c  bibliotecas/cJSON.c -o main.out
-   ```
+## Criação do Banco de perguntas Json
+O arquivo `perguntas.json` deve ser criado no seguinte formato:
 
-4
+```json
+{
+  "niveis": [
+    {
+      "nivel": 1,
+      "perguntas": [
+        {
+          "enunciado": "Texto da pergunta",
+          "alternativa": ["Alternativa A", "Alternativa B", "Alternativa C", "Alternativa D"],
+          "resposta": 1,
+          "dica": "Texto da dica"
+        }
+      ]
+    }
+  ]
+}
+
+```
+> A resposta deve seguir o padrão de índice de um array, começando em 0.
+
+## Bibliotecas
+A biblioteca utilizada para leitura e manipulação de Json:
+
+`NixJson v1.1.1`
+
+disponível em: [Github NixJson](https://github.com/juliodf24/NixJson.git) 
+

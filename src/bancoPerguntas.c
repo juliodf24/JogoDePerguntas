@@ -2,85 +2,58 @@
 #include <stdlib.h>
 #include <string.h>
 #include "bancoPerguntas.h"
-#include "../bibliotecas/cJSON.h"
+#include "nixJson.h"
 // Não altere 
-void lerAquivoJson(char** json, char** caminhoArquivo){
-    FILE* f; 
-    f = fopen(*caminhoArquivo, "r");
-    if(f == 0){
-        printf("! Erro ao ler o Json. !\n\n");
-        exit(1);
-    }
 
-    fseek(f, 0, SEEK_END);
-    long tamanhoJson = ftell(f);
-    fseek(f,0, SEEK_SET);
-
-    *json = malloc(tamanhoJson+1);
-    if(!*json){
-        printf("! Erro ao alocar memória para o JSON. !\n\n");
-        fclose(f);
-        exit(1);
-    }
-
-    fread(*json, sizeof(char), tamanhoJson, f);
-
-    (*json)[tamanhoJson] = '\0';
-    fclose(f);
-}
 
 void carregarBancoPerguntas(BANCO_PERGUNTAS* bancoPerguntas, char* caminhoArquivo){
     memset(bancoPerguntas, 0, sizeof(BANCO_PERGUNTAS)); // limpa o bancoPerguntas
     
-    char* TextoJson;
-    lerAquivoJson(&TextoJson, &caminhoArquivo);
-    if(TextoJson == NULL){
-        printf("! Erro ao ler o Json. !\n\n");
-        exit(1);
-    }
-    cJSON *json = cJSON_Parse(TextoJson);
-    if (!json){
-        printf("Erro ao fazer parse do JSON!\n");
-        free(json);
-        exit(1);
-    }
+    NIXJSON* arquivo = NixJson_create();
+    NixJson_readJson(arquivo, caminhoArquivo);
+    
+    NIXJSON* json = NixJson_parseJson(arquivo);
+    NixJson_free(arquivo);
 
-    cJSON* niveis = cJSON_GetObjectItem(json, "niveis");
-    int qtdNiveis = cJSON_GetArraySize(niveis);
+
+
+    char* Char_niveis = NixJson_GetObjectItem(json, "niveis");
+    int qtdNiveis = NixJson_GetArraySize(Char_niveis);
     bancoPerguntas->qtdNiveis = qtdNiveis;
 
     bancoPerguntas->nivel = malloc(sizeof(struct nivel) * qtdNiveis);
 
     for(int i = 0; i < qtdNiveis; i++){
+        NIXJSON* nivel = NixJson_GetArrayItem(Char_niveis, i);
+        // printf("Nivel aqui: %s\n\n", NixJson_GetObjectItem(nivel, "nivel"));
+        bancoPerguntas->nivel[i].nivel = atoi(NixJson_GetObjectItem(nivel, "nivel"));
 
-        cJSON* nivel = cJSON_GetArrayItem(niveis, i);
-        bancoPerguntas->nivel[i].nivel = cJSON_GetObjectItem(nivel, "nivel")->valueint;
 
-        cJSON* perguntasDoNivel = cJSON_GetObjectItem(nivel, "perguntas");
-        int qtdPerguntasDoNivel = cJSON_GetArraySize(perguntasDoNivel);
+        char* perguntasDoNivel = NixJson_GetObjectItem(nivel, "perguntas");
+        int qtdPerguntasDoNivel = NixJson_GetArraySize(perguntasDoNivel);
         bancoPerguntas->nivel[i].qtdPerguntas = qtdPerguntasDoNivel;
 
         bancoPerguntas->nivel[i].pergunta = malloc(sizeof(struct pergunta) * (qtdPerguntasDoNivel));
 
         for(int j = 0; j < qtdPerguntasDoNivel; j++){
-            cJSON* pergunta = cJSON_GetArrayItem(perguntasDoNivel, j);
-            char* enunciado = cJSON_GetObjectItem(pergunta, "enunciado")->valuestring;
+            NIXJSON* pergunta = NixJson_GetArrayItem(perguntasDoNivel, j);
+            char* enunciado = NixJson_GetObjectItem(pergunta, "enunciado");
             bancoPerguntas->nivel[i].pergunta[j].enunciado = strdup(enunciado);
 
-            bancoPerguntas->nivel[i].pergunta[j].dica = strdup(cJSON_GetObjectItem(pergunta, "dica")->valuestring);
+            bancoPerguntas->nivel[i].pergunta[j].dica = strdup(NixJson_GetObjectItem(pergunta, "dica"));
 
-            cJSON* resposta = cJSON_GetObjectItem(pergunta, "resposta");
-            bancoPerguntas->nivel[i].pergunta[j].resposta = resposta->valueint;
+            char* resposta = NixJson_GetObjectItem(pergunta, "resposta");
+            bancoPerguntas->nivel[i].pergunta[j].resposta = atoi(resposta);
 
-            cJSON* alternativas = cJSON_GetObjectItem(pergunta, "alternativa");
-            int qtdAlternativas = cJSON_GetArraySize(alternativas);
+            char* alternativas = NixJson_GetObjectItem(pergunta, "alternativa");
+            int qtdAlternativas = NixJson_GetArraySize(alternativas);
             bancoPerguntas->nivel[i].pergunta[j].qtdAlternativas = qtdAlternativas;
 
             bancoPerguntas->nivel[i].pergunta[j].alternativa = malloc(sizeof(char*) * qtdAlternativas);
 
             for(int k = 0; k < qtdAlternativas; k++){
-                cJSON* alternativa = cJSON_GetArrayItem(alternativas, k);
-                bancoPerguntas->nivel[i].pergunta[j].alternativa[k] = strdup(alternativa->valuestring);
+                NIXJSON* alternativa = NixJson_GetArrayItem(alternativas, k);
+                bancoPerguntas->nivel[i].pergunta[j].alternativa[k] = strdup(alternativa->stringJson);
                 
             }
 
@@ -90,6 +63,35 @@ void carregarBancoPerguntas(BANCO_PERGUNTAS* bancoPerguntas, char* caminhoArquiv
 
     }
     free(json);
+
+    // printf("===  BANCO DE PERGUNTAS ===\n");
+    // printf("Quantidade de níveis: %d\n\n", bancoPerguntas->qtdNiveis);
+
+    // for (int i = 0; i < bancoPerguntas->qtdNiveis; i++) {
+    //     struct nivel n = bancoPerguntas->nivel[i];
+    //     printf("---- Nivel %d ----\n", n.nivel);
+    //     printf("Quantidade de perguntas: %d\n\n", n.qtdPerguntas);
+
+    //     for (int j = 0; j < n.qtdPerguntas; j++) {
+    //         struct pergunta p = n.pergunta[j];
+
+    //         printf("Pergunta %d:\n", j);
+    //         printf("  Enunciado: %s\n", p.enunciado);
+    //         printf("  Quantidade de alternativas: %d\n", p.qtdAlternativas);
+
+    //         for (int k = 0; k < p.qtdAlternativas; k++) {
+    //             printf("    Alternativa %d: %s\n", k, p.alternativa[k]);
+    //         }
+
+    //         printf("  Resposta correta (índice): %d\n", p.resposta);
+    //         printf("  Dica: %s\n", p.dica);
+    //         printf("\n");
+    //     }
+
+    //     printf("---------------------------\n\n");
+    // }
+
+    // printf("=== FIM  ===\n");
 }
 
 void liberarBancoPerguntas(BANCO_PERGUNTAS* banco) {

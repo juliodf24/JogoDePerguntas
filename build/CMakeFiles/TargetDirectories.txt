@@ -1,0 +1,8 @@
+/workspaces/JogoDePerguntas/build/CMakeFiles/jogoperguntas.dir
+/workspaces/JogoDePerguntas/build/CMakeFiles/edit_cache.dir
+/workspaces/JogoDePerguntas/build/CMakeFiles/rebuild_cache.dir
+/workspaces/JogoDePerguntas/build/_deps/nixjson-build/CMakeFiles/nixjson.dir
+/workspaces/JogoDePerguntas/build/_deps/nixjson-build/CMakeFiles/nixjson_example1.dir
+/workspaces/JogoDePerguntas/build/_deps/nixjson-build/CMakeFiles/nixjson_example2.dir
+/workspaces/JogoDePerguntas/build/_deps/nixjson-build/CMakeFiles/edit_cache.dir
+/workspaces/JogoDePerguntas/build/_deps/nixjson-build/CMakeFiles/rebuild_cache.dir
