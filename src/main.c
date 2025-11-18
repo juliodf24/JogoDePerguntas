@@ -95,7 +95,6 @@ void jogar() {
             switch (opcao) {
                 case 1: {
                     int escolha = -21;
-                    printf("resposta: %d", p->resposta);
                     do{
                         if(alternativaInvalida(escolha, p->qtdAlternativas) && escolha != -21){
                             // Limpa 2 linhas
