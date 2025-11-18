@@ -25,7 +25,7 @@ void carregarBancoPerguntas(BANCO_PERGUNTAS* bancoPerguntas, char* caminhoArquiv
 
     for(int i = 0; i < qtdNiveis; i++){
         NIXJSON* nivel = NixJson_GetArrayItem(Char_niveis, i);
-        printf("Nivel aqui: %s\n\n", NixJson_GetObjectItem(nivel, "nivel"));
+        // printf("Nivel aqui: %s\n\n", NixJson_GetObjectItem(nivel, "nivel"));
         bancoPerguntas->nivel[i].nivel = atoi(NixJson_GetObjectItem(nivel, "nivel"));
 
 
@@ -64,34 +64,34 @@ void carregarBancoPerguntas(BANCO_PERGUNTAS* bancoPerguntas, char* caminhoArquiv
     }
     free(json);
 
-    printf("===  BANCO DE PERGUNTAS ===\n");
-    printf("Quantidade de níveis: %d\n\n", bancoPerguntas->qtdNiveis);
+    // printf("===  BANCO DE PERGUNTAS ===\n");
+    // printf("Quantidade de níveis: %d\n\n", bancoPerguntas->qtdNiveis);
 
-    for (int i = 0; i < bancoPerguntas->qtdNiveis; i++) {
-        struct nivel n = bancoPerguntas->nivel[i];
-        printf("---- Nivel %d ----\n", n.nivel);
-        printf("Quantidade de perguntas: %d\n\n", n.qtdPerguntas);
+    // for (int i = 0; i < bancoPerguntas->qtdNiveis; i++) {
+    //     struct nivel n = bancoPerguntas->nivel[i];
+    //     printf("---- Nivel %d ----\n", n.nivel);
+    //     printf("Quantidade de perguntas: %d\n\n", n.qtdPerguntas);
 
-        for (int j = 0; j < n.qtdPerguntas; j++) {
-            struct pergunta p = n.pergunta[j];
+    //     for (int j = 0; j < n.qtdPerguntas; j++) {
+    //         struct pergunta p = n.pergunta[j];
 
-            printf("Pergunta %d:\n", j);
-            printf("  Enunciado: %s\n", p.enunciado);
-            printf("  Quantidade de alternativas: %d\n", p.qtdAlternativas);
+    //         printf("Pergunta %d:\n", j);
+    //         printf("  Enunciado: %s\n", p.enunciado);
+    //         printf("  Quantidade de alternativas: %d\n", p.qtdAlternativas);
 
-            for (int k = 0; k < p.qtdAlternativas; k++) {
-                printf("    Alternativa %d: %s\n", k, p.alternativa[k]);
-            }
+    //         for (int k = 0; k < p.qtdAlternativas; k++) {
+    //             printf("    Alternativa %d: %s\n", k, p.alternativa[k]);
+    //         }
 
-            printf("  Resposta correta (índice): %d\n", p.resposta);
-            printf("  Dica: %s\n", p.dica);
-            printf("\n");
-        }
+    //         printf("  Resposta correta (índice): %d\n", p.resposta);
+    //         printf("  Dica: %s\n", p.dica);
+    //         printf("\n");
+    //     }
 
-        printf("---------------------------\n\n");
-    }
+    //     printf("---------------------------\n\n");
+    // }
 
-    printf("=== FIM  ===\n");
+    // printf("=== FIM  ===\n");
 }
 
 void liberarBancoPerguntas(BANCO_PERGUNTAS* banco) {

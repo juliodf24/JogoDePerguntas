@@ -7,8 +7,8 @@ Clone o repositório e compile os arquivos `.c` normalmente:
 
 ```bash
 git clone https://github.com/juliodf24/JogoDePerguntas.git
-cd nixjson
-mkdir build && cd build
+mkdir build 
+cd build
 cmake ..
 make
 ```
