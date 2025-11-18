@@ -1,0 +1,2 @@
+/usr/bin/ar qc libnixjson.a CMakeFiles/nixjson.dir/src/dicionario.c.o CMakeFiles/nixjson.dir/src/nixJson.c.o
+/usr/bin/ranlib libnixjson.a
