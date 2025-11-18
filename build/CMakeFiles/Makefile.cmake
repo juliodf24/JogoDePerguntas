@@ -51,5 +51,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/jogoperguntas.dir/DependInfo.cmake"
   "_deps/nixjson-build/CMakeFiles/nixjson.dir/DependInfo.cmake"
+  "_deps/nixjson-build/CMakeFiles/nixjson_example1.dir/DependInfo.cmake"
   "_deps/nixjson-build/CMakeFiles/nixjson_example2.dir/DependInfo.cmake"
   )

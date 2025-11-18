@@ -27,7 +27,7 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 
 include(ExternalProject)
 ExternalProject_Add(nixjson-populate
-                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/juliodf24/NixJson.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "developer"
+                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/juliodf24/NixJson.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "v1.1.1"
                     SOURCE_DIR          "/workspaces/JogoDePerguntas/build/_deps/nixjson-src"
                     BINARY_DIR          "/workspaces/JogoDePerguntas/build/_deps/nixjson-build"
                     CONFIGURE_COMMAND   ""

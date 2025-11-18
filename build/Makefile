@@ -143,6 +143,19 @@ nixjson/fast:
 .PHONY : nixjson/fast
 
 #=============================================================================
+# Target rules for targets named nixjson_example1
+
+# Build rule for target.
+nixjson_example1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nixjson_example1
+.PHONY : nixjson_example1
+
+# fast build rule for target.
+nixjson_example1/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/build.make _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/build
+.PHONY : nixjson_example1/fast
+
+#=============================================================================
 # Target rules for targets named nixjson_example2
 
 # Build rule for target.
@@ -178,30 +191,6 @@ src/bancoPerguntas.s: src/bancoPerguntas.c.s
 src/bancoPerguntas.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/jogoperguntas.dir/build.make CMakeFiles/jogoperguntas.dir/src/bancoPerguntas.c.s
 .PHONY : src/bancoPerguntas.c.s
-
-src/cJSON.o: src/cJSON.c.o
-.PHONY : src/cJSON.o
-
-# target to build an object file
-src/cJSON.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/jogoperguntas.dir/build.make CMakeFiles/jogoperguntas.dir/src/cJSON.c.o
-.PHONY : src/cJSON.c.o
-
-src/cJSON.i: src/cJSON.c.i
-.PHONY : src/cJSON.i
-
-# target to preprocess a source file
-src/cJSON.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/jogoperguntas.dir/build.make CMakeFiles/jogoperguntas.dir/src/cJSON.c.i
-.PHONY : src/cJSON.c.i
-
-src/cJSON.s: src/cJSON.c.s
-.PHONY : src/cJSON.s
-
-# target to generate assembly for a file
-src/cJSON.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/jogoperguntas.dir/build.make CMakeFiles/jogoperguntas.dir/src/cJSON.c.s
-.PHONY : src/cJSON.c.s
 
 src/main.o: src/main.c.o
 .PHONY : src/main.o
@@ -261,13 +250,11 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... jogoperguntas"
 	@echo "... nixjson"
+	@echo "... nixjson_example1"
 	@echo "... nixjson_example2"
 	@echo "... src/bancoPerguntas.o"
 	@echo "... src/bancoPerguntas.i"
 	@echo "... src/bancoPerguntas.s"
-	@echo "... src/cJSON.o"
-	@echo "... src/cJSON.i"
-	@echo "... src/cJSON.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

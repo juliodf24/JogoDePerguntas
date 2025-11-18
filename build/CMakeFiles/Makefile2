@@ -81,6 +81,7 @@ clean: _deps/nixjson-build/clean
 
 # Recursive "all" directory target.
 _deps/nixjson-build/all: _deps/nixjson-build/CMakeFiles/nixjson.dir/all
+_deps/nixjson-build/all: _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/all
 _deps/nixjson-build/all: _deps/nixjson-build/CMakeFiles/nixjson_example2.dir/all
 .PHONY : _deps/nixjson-build/all
 
@@ -90,6 +91,7 @@ _deps/nixjson-build/preinstall:
 
 # Recursive "clean" directory target.
 _deps/nixjson-build/clean: _deps/nixjson-build/CMakeFiles/nixjson.dir/clean
+_deps/nixjson-build/clean: _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/clean
 _deps/nixjson-build/clean: _deps/nixjson-build/CMakeFiles/nixjson_example2.dir/clean
 .PHONY : _deps/nixjson-build/clean
 
@@ -100,12 +102,12 @@ _deps/nixjson-build/clean: _deps/nixjson-build/CMakeFiles/nixjson_example2.dir/c
 CMakeFiles/jogoperguntas.dir/all: _deps/nixjson-build/CMakeFiles/nixjson.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/jogoperguntas.dir/build.make CMakeFiles/jogoperguntas.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/jogoperguntas.dir/build.make CMakeFiles/jogoperguntas.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/JogoDePerguntas/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target jogoperguntas"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/JogoDePerguntas/build/CMakeFiles --progress-num=1,2,3,4 "Built target jogoperguntas"
 .PHONY : CMakeFiles/jogoperguntas.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/jogoperguntas.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/JogoDePerguntas/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/JogoDePerguntas/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/jogoperguntas.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/JogoDePerguntas/build/CMakeFiles 0
 .PHONY : CMakeFiles/jogoperguntas.dir/rule
@@ -126,7 +128,7 @@ CMakeFiles/jogoperguntas.dir/clean:
 _deps/nixjson-build/CMakeFiles/nixjson.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/nixjson-build/CMakeFiles/nixjson.dir/build.make _deps/nixjson-build/CMakeFiles/nixjson.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/nixjson-build/CMakeFiles/nixjson.dir/build.make _deps/nixjson-build/CMakeFiles/nixjson.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/JogoDePerguntas/build/CMakeFiles --progress-num=6,7,8 "Built target nixjson"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/JogoDePerguntas/build/CMakeFiles --progress-num=5,6,7 "Built target nixjson"
 .PHONY : _deps/nixjson-build/CMakeFiles/nixjson.dir/all
 
 # Build rule for subdir invocation for target.
@@ -146,13 +148,39 @@ _deps/nixjson-build/CMakeFiles/nixjson.dir/clean:
 .PHONY : _deps/nixjson-build/CMakeFiles/nixjson.dir/clean
 
 #=============================================================================
+# Target rules for target _deps/nixjson-build/CMakeFiles/nixjson_example1.dir
+
+# All Build rule for target.
+_deps/nixjson-build/CMakeFiles/nixjson_example1.dir/all: _deps/nixjson-build/CMakeFiles/nixjson.dir/all
+	$(MAKE) $(MAKESILENT) -f _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/build.make _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/depend
+	$(MAKE) $(MAKESILENT) -f _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/build.make _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/JogoDePerguntas/build/CMakeFiles --progress-num=8,9 "Built target nixjson_example1"
+.PHONY : _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/all
+
+# Build rule for subdir invocation for target.
+_deps/nixjson-build/CMakeFiles/nixjson_example1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/JogoDePerguntas/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/JogoDePerguntas/build/CMakeFiles 0
+.PHONY : _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/rule
+
+# Convenience name for target.
+nixjson_example1: _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/rule
+.PHONY : nixjson_example1
+
+# clean rule for target.
+_deps/nixjson-build/CMakeFiles/nixjson_example1.dir/clean:
+	$(MAKE) $(MAKESILENT) -f _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/build.make _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/clean
+.PHONY : _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/clean
+
+#=============================================================================
 # Target rules for target _deps/nixjson-build/CMakeFiles/nixjson_example2.dir
 
 # All Build rule for target.
 _deps/nixjson-build/CMakeFiles/nixjson_example2.dir/all: _deps/nixjson-build/CMakeFiles/nixjson.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/nixjson-build/CMakeFiles/nixjson_example2.dir/build.make _deps/nixjson-build/CMakeFiles/nixjson_example2.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/nixjson-build/CMakeFiles/nixjson_example2.dir/build.make _deps/nixjson-build/CMakeFiles/nixjson_example2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/JogoDePerguntas/build/CMakeFiles --progress-num=9,10 "Built target nixjson_example2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/JogoDePerguntas/build/CMakeFiles --progress-num=10,11 "Built target nixjson_example2"
 .PHONY : _deps/nixjson-build/CMakeFiles/nixjson_example2.dir/all
 
 # Build rule for subdir invocation for target.

@@ -8,9 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/workspaces/JogoDePerguntas/src/bancoPerguntas.c" "CMakeFiles/jogoperguntas.dir/src/bancoPerguntas.c.o" "gcc" "CMakeFiles/jogoperguntas.dir/src/bancoPerguntas.c.o.d"
-  "/workspaces/JogoDePerguntas/src/main.c" "CMakeFiles/jogoperguntas.dir/src/main.c.o" "gcc" "CMakeFiles/jogoperguntas.dir/src/main.c.o.d"
-  "/workspaces/JogoDePerguntas/src/ui.c" "CMakeFiles/jogoperguntas.dir/src/ui.c.o" "gcc" "CMakeFiles/jogoperguntas.dir/src/ui.c.o.d"
+  "/workspaces/JogoDePerguntas/build/_deps/nixjson-src/examples/example1.c" "_deps/nixjson-build/CMakeFiles/nixjson_example1.dir/examples/example1.c.o" "gcc" "_deps/nixjson-build/CMakeFiles/nixjson_example1.dir/examples/example1.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

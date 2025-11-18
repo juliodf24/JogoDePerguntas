@@ -83,24 +83,10 @@ CMakeFiles/jogoperguntas.dir/src/bancoPerguntas.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/jogoperguntas.dir/src/bancoPerguntas.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /workspaces/JogoDePerguntas/src/bancoPerguntas.c -o CMakeFiles/jogoperguntas.dir/src/bancoPerguntas.c.s
 
-CMakeFiles/jogoperguntas.dir/src/cJSON.c.o: CMakeFiles/jogoperguntas.dir/flags.make
-CMakeFiles/jogoperguntas.dir/src/cJSON.c.o: /workspaces/JogoDePerguntas/src/cJSON.c
-CMakeFiles/jogoperguntas.dir/src/cJSON.c.o: CMakeFiles/jogoperguntas.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/JogoDePerguntas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/jogoperguntas.dir/src/cJSON.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/jogoperguntas.dir/src/cJSON.c.o -MF CMakeFiles/jogoperguntas.dir/src/cJSON.c.o.d -o CMakeFiles/jogoperguntas.dir/src/cJSON.c.o -c /workspaces/JogoDePerguntas/src/cJSON.c
-
-CMakeFiles/jogoperguntas.dir/src/cJSON.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/jogoperguntas.dir/src/cJSON.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /workspaces/JogoDePerguntas/src/cJSON.c > CMakeFiles/jogoperguntas.dir/src/cJSON.c.i
-
-CMakeFiles/jogoperguntas.dir/src/cJSON.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/jogoperguntas.dir/src/cJSON.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /workspaces/JogoDePerguntas/src/cJSON.c -o CMakeFiles/jogoperguntas.dir/src/cJSON.c.s
-
 CMakeFiles/jogoperguntas.dir/src/main.c.o: CMakeFiles/jogoperguntas.dir/flags.make
 CMakeFiles/jogoperguntas.dir/src/main.c.o: /workspaces/JogoDePerguntas/src/main.c
 CMakeFiles/jogoperguntas.dir/src/main.c.o: CMakeFiles/jogoperguntas.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/JogoDePerguntas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/jogoperguntas.dir/src/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/JogoDePerguntas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/jogoperguntas.dir/src/main.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/jogoperguntas.dir/src/main.c.o -MF CMakeFiles/jogoperguntas.dir/src/main.c.o.d -o CMakeFiles/jogoperguntas.dir/src/main.c.o -c /workspaces/JogoDePerguntas/src/main.c
 
 CMakeFiles/jogoperguntas.dir/src/main.c.i: cmake_force
@@ -114,7 +100,7 @@ CMakeFiles/jogoperguntas.dir/src/main.c.s: cmake_force
 CMakeFiles/jogoperguntas.dir/src/ui.c.o: CMakeFiles/jogoperguntas.dir/flags.make
 CMakeFiles/jogoperguntas.dir/src/ui.c.o: /workspaces/JogoDePerguntas/src/ui.c
 CMakeFiles/jogoperguntas.dir/src/ui.c.o: CMakeFiles/jogoperguntas.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/JogoDePerguntas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/jogoperguntas.dir/src/ui.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/JogoDePerguntas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/jogoperguntas.dir/src/ui.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/jogoperguntas.dir/src/ui.c.o -MF CMakeFiles/jogoperguntas.dir/src/ui.c.o.d -o CMakeFiles/jogoperguntas.dir/src/ui.c.o -c /workspaces/JogoDePerguntas/src/ui.c
 
 CMakeFiles/jogoperguntas.dir/src/ui.c.i: cmake_force
@@ -128,7 +114,6 @@ CMakeFiles/jogoperguntas.dir/src/ui.c.s: cmake_force
 # Object files for target jogoperguntas
 jogoperguntas_OBJECTS = \
 "CMakeFiles/jogoperguntas.dir/src/bancoPerguntas.c.o" \
-"CMakeFiles/jogoperguntas.dir/src/cJSON.c.o" \
 "CMakeFiles/jogoperguntas.dir/src/main.c.o" \
 "CMakeFiles/jogoperguntas.dir/src/ui.c.o"
 
@@ -136,13 +121,12 @@ jogoperguntas_OBJECTS = \
 jogoperguntas_EXTERNAL_OBJECTS =
 
 jogoperguntas: CMakeFiles/jogoperguntas.dir/src/bancoPerguntas.c.o
-jogoperguntas: CMakeFiles/jogoperguntas.dir/src/cJSON.c.o
 jogoperguntas: CMakeFiles/jogoperguntas.dir/src/main.c.o
 jogoperguntas: CMakeFiles/jogoperguntas.dir/src/ui.c.o
 jogoperguntas: CMakeFiles/jogoperguntas.dir/build.make
 jogoperguntas: _deps/nixjson-build/libnixjson.a
 jogoperguntas: CMakeFiles/jogoperguntas.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspaces/JogoDePerguntas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable jogoperguntas"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspaces/JogoDePerguntas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable jogoperguntas"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/jogoperguntas.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

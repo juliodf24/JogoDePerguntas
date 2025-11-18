@@ -131,6 +131,20 @@ nixjson/fast:
 .PHONY : nixjson/fast
 
 # Convenience name for target.
+_deps/nixjson-build/CMakeFiles/nixjson_example1.dir/rule:
+	cd /workspaces/JogoDePerguntas/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/rule
+.PHONY : _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/rule
+
+# Convenience name for target.
+nixjson_example1: _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/rule
+.PHONY : nixjson_example1
+
+# fast build rule for target.
+nixjson_example1/fast:
+	cd /workspaces/JogoDePerguntas/build && $(MAKE) $(MAKESILENT) -f _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/build.make _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/build
+.PHONY : nixjson_example1/fast
+
+# Convenience name for target.
 _deps/nixjson-build/CMakeFiles/nixjson_example2.dir/rule:
 	cd /workspaces/JogoDePerguntas/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/nixjson-build/CMakeFiles/nixjson_example2.dir/rule
 .PHONY : _deps/nixjson-build/CMakeFiles/nixjson_example2.dir/rule
@@ -143,6 +157,30 @@ nixjson_example2: _deps/nixjson-build/CMakeFiles/nixjson_example2.dir/rule
 nixjson_example2/fast:
 	cd /workspaces/JogoDePerguntas/build && $(MAKE) $(MAKESILENT) -f _deps/nixjson-build/CMakeFiles/nixjson_example2.dir/build.make _deps/nixjson-build/CMakeFiles/nixjson_example2.dir/build
 .PHONY : nixjson_example2/fast
+
+examples/example1.o: examples/example1.c.o
+.PHONY : examples/example1.o
+
+# target to build an object file
+examples/example1.c.o:
+	cd /workspaces/JogoDePerguntas/build && $(MAKE) $(MAKESILENT) -f _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/build.make _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/examples/example1.c.o
+.PHONY : examples/example1.c.o
+
+examples/example1.i: examples/example1.c.i
+.PHONY : examples/example1.i
+
+# target to preprocess a source file
+examples/example1.c.i:
+	cd /workspaces/JogoDePerguntas/build && $(MAKE) $(MAKESILENT) -f _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/build.make _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/examples/example1.c.i
+.PHONY : examples/example1.c.i
+
+examples/example1.s: examples/example1.c.s
+.PHONY : examples/example1.s
+
+# target to generate assembly for a file
+examples/example1.c.s:
+	cd /workspaces/JogoDePerguntas/build && $(MAKE) $(MAKESILENT) -f _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/build.make _deps/nixjson-build/CMakeFiles/nixjson_example1.dir/examples/example1.c.s
+.PHONY : examples/example1.c.s
 
 examples/example2.o: examples/example2.c.o
 .PHONY : examples/example2.o
@@ -225,7 +263,11 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... nixjson"
+	@echo "... nixjson_example1"
 	@echo "... nixjson_example2"
+	@echo "... examples/example1.o"
+	@echo "... examples/example1.i"
+	@echo "... examples/example1.s"
 	@echo "... examples/example2.o"
 	@echo "... examples/example2.i"
 	@echo "... examples/example2.s"

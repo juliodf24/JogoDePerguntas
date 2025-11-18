@@ -41,12 +41,12 @@ endif()
 
 execute_process(
   COMMAND "/usr/local/bin/git"
-          checkout "developer" --
+          checkout "v1.1.1" --
   WORKING_DIRECTORY "/workspaces/JogoDePerguntas/build/_deps/nixjson-src"
   RESULT_VARIABLE error_code
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to checkout tag: 'developer'")
+  message(FATAL_ERROR "Failed to checkout tag: 'v1.1.1'")
 endif()
 
 set(init_submodules TRUE)

@@ -95,6 +95,7 @@ void jogar() {
             switch (opcao) {
                 case 1: {
                     int escolha = -21;
+                    printf("resposta: %d", p->resposta);
                     do{
                         if(alternativaInvalida(escolha, p->qtdAlternativas) && escolha != -21){
                             // Limpa 2 linhas
@@ -129,19 +130,47 @@ void jogar() {
 
                 case 2: {
                     printf("\nEscolha ação especial: (1) Pular  (2) Trocar  (3) Dica  (0) Voltar\nEscolha: ");
-                    char acaoBuf[16];
-                    if (!fgets(acaoBuf, sizeof(acaoBuf), stdin)) continue;
-                    int a = atoi(acaoBuf);
+                    // char acaoBuf[16];
+                    // if (!fgets(acaoBuf, sizeof(acaoBuf), stdin)) continue;
+                    // int a = atoi(acaoBuf);
 
-                    //fazer verificacao de caracter invalido
-                    if(scanf("%d",&a)!=1){
-                        printf("'\nOpção inválida! Tente novamente.\n");
-                        continue;
+                    // //fazer verificacao de caracter invalido
+                    // if(scanf("%d",&a)!=1){
+                    //     printf("'\nOpção inválida! Tente novamente.\n");
+                    //     continue;
+                    // }
+                    // if(a<0||a>3){
+                    //     printf("\nOpção inválida! Tente novamente.\n");
+                    //     continue;
+                    // }
+                    char entrada[64];
+                    if (!fgets(entrada, sizeof(entrada), stdin)) continue;
+                    entrada[strcspn(entrada, "\n")] = '\0';
+                    if (strlen(entrada) == 0) continue;
+
+                    int valido = 1;
+                    for (int i = 0; i < strlen(entrada); i++) {
+                        if (entrada[i] < '0' || entrada[i] > '9') {
+                        valido = 0;
+                        break;
+                        }
                     }
-                    if(a<0||a>3){
-                        printf("\nOpção inválida! Tente novamente.\n");
-                        continue;
+
+                    if (!valido) {
+                        printf("\nCaractere inválido! Digite apenas números de 0 a 3.\n");
+                        printf("Deseja tentar novamente (1) ou encerrar seção(0)? ");
+                        char escolha[8];
+                        if (!fgets(escolha, sizeof(escolha), stdin)) continue;
+                        if (escolha[0] == '0') {
+                        printf("\nVocê escolheu encerrar a sessão.\n");
+                        sair = 1;
+                    break; 
                     }
+                    continue; 
+                    }
+
+                    int opcao = atoi(entrada);
+                    int a = opcao;
 
 
                     if (a == 1 && disponivelPular) {
