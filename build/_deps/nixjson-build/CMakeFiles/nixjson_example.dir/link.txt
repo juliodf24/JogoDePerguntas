@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/nixjson_example.dir/examples/example1.c.o -o nixjson_example  libnixjson.a 

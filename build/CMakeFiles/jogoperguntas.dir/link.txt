@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/jogoperguntas.dir/src/bancoPerguntas.c.o CMakeFiles/jogoperguntas.dir/src/cJSON.c.o CMakeFiles/jogoperguntas.dir/src/main.c.o CMakeFiles/jogoperguntas.dir/src/ui.c.o -o jogoperguntas  _deps/nixjson-build/libnixjson.a 

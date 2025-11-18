@@ -18,7 +18,7 @@ JOGADOR jogador;
 int main() {
     srand((unsigned) time(NULL));
 
-    carregarBancoPerguntas(&bancoPerguntas, "assets/perguntas.json");
+    carregarBancoPerguntas(&bancoPerguntas, "../assets/perguntas.json");
 
     
     imprimirBola();

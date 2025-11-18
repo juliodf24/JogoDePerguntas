@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/workspaces/JogoDePerguntas/build/_deps/nixjson-subbuild/CMakeFiles/nixjson-populate"
+		},
+		{
+			"file" : "/workspaces/JogoDePerguntas/build/_deps/nixjson-subbuild/CMakeFiles/nixjson-populate.rule"
+		},
+		{
+			"file" : "/workspaces/JogoDePerguntas/build/_deps/nixjson-subbuild/CMakeFiles/nixjson-populate-complete.rule"
+		},
+		{
+			"file" : "/workspaces/JogoDePerguntas/build/_deps/nixjson-subbuild/nixjson-populate-prefix/src/nixjson-populate-stamp/nixjson-populate-build.rule"
+		},
+		{
+			"file" : "/workspaces/JogoDePerguntas/build/_deps/nixjson-subbuild/nixjson-populate-prefix/src/nixjson-populate-stamp/nixjson-populate-configure.rule"
+		},
+		{
+			"file" : "/workspaces/JogoDePerguntas/build/_deps/nixjson-subbuild/nixjson-populate-prefix/src/nixjson-populate-stamp/nixjson-populate-download.rule"
+		},
+		{
+			"file" : "/workspaces/JogoDePerguntas/build/_deps/nixjson-subbuild/nixjson-populate-prefix/src/nixjson-populate-stamp/nixjson-populate-install.rule"
+		},
+		{
+			"file" : "/workspaces/JogoDePerguntas/build/_deps/nixjson-subbuild/nixjson-populate-prefix/src/nixjson-populate-stamp/nixjson-populate-mkdir.rule"
+		},
+		{
+			"file" : "/workspaces/JogoDePerguntas/build/_deps/nixjson-subbuild/nixjson-populate-prefix/src/nixjson-populate-stamp/nixjson-populate-patch.rule"
+		},
+		{
+			"file" : "/workspaces/JogoDePerguntas/build/_deps/nixjson-subbuild/nixjson-populate-prefix/src/nixjson-populate-stamp/nixjson-populate-test.rule"
+		},
+		{
+			"file" : "/workspaces/JogoDePerguntas/build/_deps/nixjson-subbuild/nixjson-populate-prefix/src/nixjson-populate-stamp/nixjson-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"nixjson-populate"
+		],
+		"name" : "nixjson-populate"
+	}
+}

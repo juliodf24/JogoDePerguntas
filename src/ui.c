@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "ui.h"
+#include "nixJson.h"
 #include "bancoPerguntas.h"
 
 // === Cores ANSI ===
@@ -67,6 +68,8 @@ int imprimirNomeJogo() {
     printf("%s                            | |                         __/ |                     %s\n", BRANCO, RESET);
     printf("%s                            |_|                        |___/                      %s\n", BRANCO, RESET);
     printf("%s⚽🏆 Bem-vindo ao Champions Game — o quiz de futebol que definirá se você é o mestre em futebol! ⚽🏆%s\n", AMARELO, RESET);
+    NixJson_version();
+    printf("\n");
     printf("\nVocê tem %s1 vida%s. Uma resposta errada e o jogo acaba!\n", VERMELHO, RESET);
     printf("Use sabiamente suas ações especiais (Dica, Troca e Pular — %suma vez cada%s).\n\n", AMARELO, RESET);
     printf("Está pronto para começar sua jornada rumo ao título de campeão? (s/n): ");
